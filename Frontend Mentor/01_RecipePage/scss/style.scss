@@ -1,0 +1,87 @@
+// Font
+@font-face {
+    font-family: VariableFont;
+    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: YoungSerif;
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+// VAR
+$clr-prim1: hsl(14, 45%, 36%);
+$clr-prim2: hsl(332, 51%, 32%);
+$roseWhite: hsl(330, 100%, 98%);
+$eggShell: hsl(30, 54%, 90%);
+$greyLight: hsl(30, 18%, 87%);
+$text: hsl(30, 10%, 34%);
+$darkCharcoal: hsl(24, 5%, 18%);
+$bg: wheat;
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: VariableFont; color: $text;
+}
+.part{padding: 1.25rem 0; border-bottom: 1px solid $greyLight;}
+.part>ul, .part>p{margin-top: 1rem;}
+.part ul li{margin: 0 3rem .5rem 3rem;}
+b{color: $darkCharcoal;}
+
+// Body =====
+body{background: lighten($bg, 8%);}
+.container{
+    padding: 5%; 
+    background: white; 
+    box-shadow: 2vw 2vw 3vw lighten($bg, 5%);
+}
+img{border-radius: 8px;}
+h1.main-title{color: $darkCharcoal;}
+img, h1.main-title, p.main-text{margin-bottom: 1.5rem;}
+
+// Preparation time
+.one{
+    margin-left: 2rem;
+    border: none;
+    h3{color: $clr-prim2;}
+}
+// Ingredients
+.two{
+    h2{color: $clr-prim1;}
+}
+// Instructions
+.three{
+    h2{color: $clr-prim1;}
+    ul li{
+        padding-left: 1rem;
+        list-style-type: number;
+        color: $clr-prim1;
+        font-weight: bold;
+        p{font-weight: normal; display: inline; color: $text;}
+    }
+}
+// Nutrition
+.four{
+    border: none;
+    padding-bottom: .5rem;
+    h2{color: $clr-prim1;}
+    ul{margin-top: .5rem;}
+    ul li{
+        border-bottom: 1px solid $greyLight;
+        padding: 1rem 0;
+        margin: 0 3rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        &:last-child{border: none;}
+    }
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{padding: 5%; margin: 5% 10%; border-radius: 1rem;}
+}
+@media screen and (min-width: 1024px) {
+    .container{padding: 4%; margin: 5% 20%;}
+}
