@@ -1,2 +1,2 @@
-## hitataka.github.io/
+## (https://hitataka.github.io)
 # site
