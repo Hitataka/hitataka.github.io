@@ -1,0 +1,84 @@
+// VAR =====
+$Green: hsl(75, 94%, 57%);
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 20%);
+$DarkGrey: hsl(0, 0%, 12%);
+$OffBlack: hsl(0, 0%, 8%);
+
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+body{
+    background: $OffBlack; 
+    min-height: 100vh;
+    align-content: center;
+}
+.container{
+    margin: 4% 6%;
+    padding: 1.5rem;
+    background: $DarkGrey;
+    border-radius: 8px;
+}
+
+// Profil
+.profil{
+    width: 100%;
+    padding: 1.5rem 0;
+    display: grid;
+    justify-items: center;
+    .image{
+        width: 100px; height: 100px;
+        border-radius: 50%; 
+        border: 2px solid $White;
+        color: $White;
+        background: $Grey;
+        overflow: hidden;
+        display: grid;
+        place-content: center;
+        i{font-size: 90px; margin-top: 24px;}
+    }
+    .name{color: $White; margin-top: 1.25rem;}
+    .address{color: $Green;}
+}
+// Links
+.links{
+    display: grid;
+    justify-items: center;
+    p{font-size: 1rem; color: $White; text-align: center;}
+    .list{
+        width: 100%;
+        margin: 1.5rem 0;
+        list-style: none;
+        display: grid;
+        a{
+            background: $Grey;
+            color: $White;
+            text-decoration: none;
+            text-align: center;
+            line-height: 3rem;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: .5rem 1rem;
+            &:first-child{margin-top: 0;}
+            &:last-child{margin-bottom: 0;}
+        }
+        a:hover{color: $Grey; background: $Green;}
+        a:active{color: $DarkGrey; background: $White;}
+    }
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{margin: 6% 20%; padding: 2rem;}
+}
+@media screen and (min-width: 1024px) {
+    .container{margin: 8% 28%; padding: 2.5rem;}
+}
