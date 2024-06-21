@@ -1,0 +1,102 @@
+// VAR =====
+$yellow: hsl(47, 88%, 63%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 50%);
+$black: hsl(0, 0%, 7%);
+
+@font-face {
+    font-family: Figtree;
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Figtree-Italic;
+    src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Figtree, sans-serif; color: $black;
+}
+body{
+    min-height: 100vh;
+    background: $yellow;
+    align-content: center;
+}
+.container{
+    margin: 4% 10%;
+    padding: 1.5rem;
+    border: 2px solid $black;
+    border-radius: 16px;
+    background: $white;
+    box-shadow: 8px 8px 2px 0 rgba($black, .8);
+    transition: .2s;
+    display: grid;
+    &>*{margin: 10px 0;}
+    &>*:first-child{margin-top: 0;}
+}
+// Image
+.bg-image{
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    background: $yellow;
+    background-image: url(../assets/images/illustration-article.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// Tag & Date
+.text-up{
+    display: grid;
+    span{
+        display: flex;
+        margin-bottom: .5rem;
+        .tag{
+            width: fit-content;
+            padding: 6px 12px;
+            background: $yellow;
+            border-radius: 4px;
+            margin: 0 6px;
+            &:first-child{margin-left: 0;}
+        }
+    }
+    .date{
+        font-weight: 500;
+    }
+}
+// Text Content
+.big-text{font-weight: 800;}
+.text-content{color: $grey; line-height: 22px;}
+// User
+.user{
+    display: flex;
+    align-items: center;
+    $clr: $grey;
+    .image{
+        width: 2rem; height: 2rem;
+        border: 2px solid $clr;
+        border-radius: 50%;
+        overflow: hidden;
+        display: grid; place-content: center;
+        i{font-size: 1.75rem; margin-top: 8px; color: $clr;}
+    }
+    .name{margin-left: .5rem; font-weight: 800; color: $clr;}
+}
+    
+
+// hover & Active =====
+.container:hover{box-shadow: 16px 16px 6px 0 rgba($black, .6);}
+.text-up span .tag:hover{background: $grey; color: $white; cursor: pointer;}
+.text-up span .tag:active{background: $white; color: $yellow;}
+.big-text:hover{color: $yellow; cursor: pointer;}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{margin: 6% 25%; padding: 1.75rem;}
+}
+@media screen and (min-width: 1024px) {
+    .container{margin: 4% 30%; padding: 2rem;}
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BLOG CARD - Frontend Mentor</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Image -->
+        <div class="bg-image"></div>
+        <!-- Tag & Date -->
+        <div class="text-up">
+            <span>
+                <b class="tag">#HTML</b>
+                <b class="tag">#CSS</b>
+                <b class="tag">#JS</b>
+            </span>
+            <p class="date" id="date"></p>
+        </div>
+        <!-- Text Content -->
+        <h2 class="big-text">HTML & CSS foundations</h2>
+        <p class="text-content">These languages are the backbone of every website, defining
+            structure, content, and presentation.
+        </p>
+        <!-- User -->
+        <div class="user">
+            <span class="image"><i class="fas fa-user"></i></span>
+            <b class="name">Grass Hopper</b>
+        </div>
+
+    </div> 
+
+    <!-- JS -->
+    <script>
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const hari = new Date();
+        document.getElementById("date").innerText = `Today : ${days[hari.getDay()]}, ${hari.getDate()} ${months[hari.getMonth()]} ${hari.getFullYear()}`;   
+    </script>
+</body>
+</html>

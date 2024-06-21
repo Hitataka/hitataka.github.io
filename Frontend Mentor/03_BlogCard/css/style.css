@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Figtree;
+  src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Figtree-Italic;
+  src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Figtree, sans-serif;
+  color: hsl(0, 0%, 7%);
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(47, 88%, 63%);
+  align-content: center;
+}
+
+.container {
+  margin: 4% 10%;
+  padding: 1.5rem;
+  border: 2px solid hsl(0, 0%, 7%);
+  border-radius: 16px;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 8px 8px 2px 0 rgba(18, 18, 18, 0.8);
+  transition: 0.2s;
+  display: grid;
+}
+.container > * {
+  margin: 10px 0;
+}
+.container > *:first-child {
+  margin-top: 0;
+}
+
+.bg-image {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background: hsl(47, 88%, 63%);
+  background-image: url(../assets/images/illustration-article.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-up {
+  display: grid;
+}
+.text-up span {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.text-up span .tag {
+  width: fit-content;
+  padding: 6px 12px;
+  background: hsl(47, 88%, 63%);
+  border-radius: 4px;
+  margin: 0 6px;
+}
+.text-up span .tag:first-child {
+  margin-left: 0;
+}
+.text-up .date {
+  font-weight: 500;
+}
+
+.big-text {
+  font-weight: 800;
+}
+
+.text-content {
+  color: hsl(0, 0%, 50%);
+  line-height: 22px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user .image {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid hsl(0, 0%, 50%);
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}
+.user .image i {
+  font-size: 1.75rem;
+  margin-top: 8px;
+  color: hsl(0, 0%, 50%);
+}
+.user .name {
+  margin-left: 0.5rem;
+  font-weight: 800;
+  color: hsl(0, 0%, 50%);
+}
+
+.container:hover {
+  box-shadow: 16px 16px 6px 0 rgba(18, 18, 18, 0.6);
+}
+
+.text-up span .tag:hover {
+  background: hsl(0, 0%, 50%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.text-up span .tag:active {
+  background: hsl(0, 0%, 100%);
+  color: hsl(47, 88%, 63%);
+}
+
+.big-text:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 6% 25%;
+    padding: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 4% 30%;
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
