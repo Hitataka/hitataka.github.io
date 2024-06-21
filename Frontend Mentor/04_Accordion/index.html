@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ACCORDION - Frontend Mentor</title>
+</head>
+<body>
+    <!-- BG IMAGE -->
+    <div class="bg-img"></div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="./assets/images/icon-star.svg" alt="Star_IMG">
+            <h1>FAQs</h1>
+        </div>
+        <!-- List -->
+         <div class="list">
+            <!-- 1 -->
+            <details>
+                <summary> <b>What is Frontend Mentor, and how will it help me?</b>
+                    <img src="./assets/images/icon-plus.svg" alt="Plus_IMG" /> </summary>
+                <p>Frontend Mentor offers realistic coding challenges to help 
+                    developers improve their frontend coding skills with projects 
+                    in HTML, CSS, and JavaScript. It's suitable for all levels 
+                    and ideal for portfolio building.</p>
+            </details>
+            <!-- 2 -->
+            <details>
+                <summary> <b>Is Frontend Mentor free?</b>
+                    <img src="./assets/images/icon-plus.svg" alt="Plus_IMG" /> </summary>
+                <p>Yes, Frontend Mentor offers both free and premium coding 
+                    challenges, with the free option providing access to a range 
+                    of projects suitable for all skill levels.</p>
+            </details>
+            <!-- 3 -->
+            <details>
+                <summary> <b>Can I use Frontend Mentor projects im my portfolio?</b>
+                    <img src="./assets/images/icon-plus.svg" alt="Plus_IMG" /> </summary>
+                <p>Yes, you can use projects completed on Frontend Mentor in 
+                    your portfolio. It's an excellent way to showcase your 
+                    skills to potential employers!</p>
+            </details>
+            <!-- 4 -->
+            <details>
+                <summary> <b>How can I get help if I'm suck on a challange?</b>
+                    <img src="./assets/images/icon-plus.svg" alt="Plus_IMG" /> </summary>
+                <p>The best place to get help is inside Frontend Mentor's 
+                    Discord community. There's a help channel where you can ask 
+                    questions and seek support from other community members.</p>
+            </details>
+         </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        const details_List = document.querySelectorAll(".list details");
+
+        // Func
+        function clickSummary(idx){
+            details_List[idx].classList.toggle("act");
+            if (details_List[idx].classList.contains("act")) {
+                details_List[idx].querySelector("summary img").src = "./assets/images/icon-minus.svg";
+            } else {
+                details_List[idx].querySelector("summary img").src = "./assets/images/icon-plus.svg";
+            }
+        }
+
+        // Click "summary"
+        for (let idx = 0; idx < details_List.length; idx++) {
+            details_List[idx].querySelector("summary").addEventListener('click', function(){
+                clickSummary(idx);
+            });
+        }
+    </script>
+</body>
+</html>
