@@ -11,3 +11,6 @@ https://hitataka.github.io/Frontend%20Mentor/03_BlogCard/index.html<br/>
 <br/>
 04 ACCORDION - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/04_Accordion/index.html<br/>
+<br/>
+05 RESULT SUMMARY - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/05_ResultSummary/index.html<br/>
