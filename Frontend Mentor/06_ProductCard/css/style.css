@@ -1,0 +1,115 @@
+@font-face {
+  font-family: Fraunces;
+  src: url(../asset/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../asset/fonts/Montserrat-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-width: 540px;
+  margin: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(108, 114, 137, 0.4);
+  overflow: hidden;
+  display: grid;
+}
+
+.one {
+  width: 100%;
+  height: 220px;
+  background: hsl(228, 12%, 48%);
+  background-image: url("../asset/images/image-product-desktop.jpg");
+  background-size: cover;
+  background-position: center -180px;
+}
+
+.two {
+  padding: 1.5rem 2rem;
+  display: grid;
+}
+.two > * {
+  margin: 0.5rem 0;
+}
+.two .title1 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 48%);
+}
+.two .title2 {
+  font-family: Fraunces;
+  color: hsl(212, 21%, 14%);
+}
+.two .paragraf {
+  font-size: 1rem;
+  color: hsl(228, 12%, 48%);
+}
+.two .price {
+  margin: 1.5rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.two .price .big {
+  font-family: Fraunces;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: hsl(158, 36%, 37%);
+}
+.two .price .small {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-size: 1rem;
+}
+.two button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: hsl(158, 36%, 37%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two button img {
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+.two button b {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.two button:hover {
+  background: #1c3b30;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    max-width: 660px;
+    margin: 2rem 5%;
+  }
+  .two {
+    width: 60%;
+  }
+  .one {
+    width: 40%;
+    height: 100%;
+    background-position: center;
+  }
+}/*# sourceMappingURL=style.css.map */

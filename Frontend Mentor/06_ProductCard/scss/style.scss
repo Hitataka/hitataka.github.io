@@ -1,0 +1,117 @@
+// VAR =====
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+
+@font-face {
+    font-family: Fraunces;
+    src: url(../asset/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../asset/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+// STYLE ======
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: $cream;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 540px;
+    margin: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba($darkGrayishBlue, .4);
+    overflow: hidden;
+    display: grid;
+}
+
+// One
+.one{
+    width: 100%;
+    height: 220px;
+    background: $darkGrayishBlue;
+    background-image: url("../asset/images/image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center -180px;
+}
+// Two
+.two{
+    padding: 1.5rem 2rem;
+    display: grid;
+    &>*{margin: .5rem 0;}
+    // text
+    .title1{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        color: $darkGrayishBlue;
+    }
+    .title2{
+        font-family: Fraunces;
+        color: $veryDarkBlue;
+    }
+    .paragraf{
+        font-size: 1rem;
+        color: $darkGrayishBlue;
+    }
+    // price
+    .price{
+        margin: 1.5rem 0 .5rem 0;
+        display: flex;
+        align-items: center;
+        .big{
+            font-family: Fraunces; 
+            font-size: 2rem; 
+            margin-right: 1.5rem;
+            color: $darkCyan;
+        }
+        .small{
+            text-decoration: line-through; 
+            color: $darkGrayishBlue; 
+            font-size: 1rem;
+        }
+    }
+    // btn
+    button{
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        background: $darkCyan;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 1.25rem;
+            margin-right: .75rem;
+        }
+        b{letter-spacing: 1px; font-size: 14px;}
+        &:hover{background: darken($darkCyan, 20%);}
+    }
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{
+        display: flex;
+        max-width: 660px;
+        margin: 2rem 5%;
+    }
+    .two{width: 60%;}
+    .one{
+        width: 40%;
+        height: 100%;
+        background-position: center;
+    }
+}
+
