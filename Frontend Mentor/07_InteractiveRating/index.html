@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>INTERACTIVE RATING - Frontend Mentor</title>
+</head>
+<body>
+    <!-- PAGE ONE -->
+    <div class="page one">
+        <!-- Icon -->
+        <div class="icon"><img src="./asset/images/icon-star.svg" alt="Star_Icon"></div>
+        <!-- Text -->
+        <h2 class="header">How did we do?</h2>
+        <p class="text">Please let us know how we did with your support 
+            request. All feedback is appreciated to help us improve our 
+            offering!
+        </p>
+        <!-- Num-Select -->
+        <div class="num-select">
+            <label for="rad1">1
+                <input type="radio" name="rad" id="rad1" /> </label>
+            <label for="rad2">2
+                <input type="radio" name="rad" id="rad2" /> </label>
+            <label for="rad3">3
+                <input type="radio" name="rad" id="rad3" /> </label>
+            <label for="rad4">4
+                <input type="radio" name="rad" id="rad4" /> </label>
+            <label for="rad5">5
+                <input type="radio" name="rad" id="rad5" /> </label>
+        </div>
+        <!-- Submit -->
+        <button type="button" id="submit">SUBMIT</button>
+    </div>
+
+    <!-- PAGE TWO -->
+    <div class="page two">
+        <!-- Image -->
+        <img class="image" src="./asset/images/illustration-thank-you.svg" alt="Thank_IMG" />
+        <!-- Select-Info -->
+        <div class="select-info" id="select-info">You selected 3 out of 5</div>
+        <!-- Text -->
+        <h2 class="header">Thank you!</h2>
+        <p class="text">We appreciate you taking the time to give a 
+            rating. If you ever need more support, don't hesitate 
+            to get in touch!
+        </p>
+    </div>
+
+    <!-- JS -->
+     <script>
+        const numList = document.querySelectorAll(".num-select label");
+        const submit = document.querySelector("#submit");
+        const selInfo = document.querySelector("#select-info");
+        let numSelect;
+
+        // List Num Click
+        for (let idx=0; idx < numList.length; idx++) {
+            // Num Click
+            numList[idx].addEventListener('click', function(){
+                // List Num RemoveCalss(active)
+                for (let abc=0; abc < numList.length; abc++) {
+                    numList[abc].classList.remove('active');
+                }
+                // Num Click AddClass(active)
+                numList[idx].classList.add('active');
+                numSelect = idx + 1;
+            })
+        }
+        // Submit Click
+        submit.onclick = function() {
+            // Run if you select number
+            if (numSelect != undefined) {
+                selInfo.textContent = `You selected ${numSelect} out of ${Number(numList.length)}`;
+                document.querySelector(".page.one").style.display = "none";
+                document.querySelector(".page.two").style.display = "grid";
+            }
+        }
+
+
+     </script>
+</body>
+</html>

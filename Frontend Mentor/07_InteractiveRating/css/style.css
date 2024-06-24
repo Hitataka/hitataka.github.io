@@ -1,0 +1,143 @@
+@font-face {
+  font-family: Overpass;
+  src: url(../asset/fonts/Overpass-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: Overpass, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(216, 12%, 8%);
+  display: grid;
+  place-content: center;
+}
+
+.page {
+  max-width: 300px;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: hsl(213, 22%, 14%);
+  color: white;
+  display: grid;
+}
+
+.page.one > * {
+  margin: 0.75rem 0;
+}
+.page.one > *:first-child {
+  margin-top: 0;
+}
+.page.one > *:last-child {
+  margin-bottom: 0;
+}
+.page.one .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(149, 158, 172, 0.1);
+  display: grid;
+  place-content: center;
+}
+.page.one .icon img {
+  width: 1.125rem;
+}
+.page.one .text {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+  line-height: 20px;
+}
+.page.one .num-select {
+  display: flex;
+  justify-content: space-between;
+}
+.page.one .num-select label {
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 3.1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(149, 158, 172, 0.2);
+  color: hsl(217, 12%, 63%);
+}
+.page.one .num-select label.active {
+  background: #fda05e;
+  color: hsl(213, 22%, 14%);
+}
+.page.one .num-select label:hover {
+  background: white;
+  color: hsl(213, 22%, 14%);
+}
+.page.one .num-select label:active {
+  background: hsl(25, 97%, 53%);
+}
+.page.one .num-select label input[type=radio] {
+  display: none;
+}
+.page.one #submit {
+  cursor: pointer;
+  border: none;
+  border-radius: 1.25rem;
+  background: hsl(25, 97%, 53%);
+  color: hsl(213, 22%, 14%);
+  line-height: 2.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.page.one #submit:hover {
+  background: white;
+}
+.page.one #submit:active {
+  background: hsl(216, 12%, 8%);
+  color: white;
+}
+
+.page.two {
+  justify-items: center;
+  text-align: center;
+}
+.page.two > * {
+  margin: 0.5rem 0;
+}
+.page.two > *:first-child {
+  margin-top: 0;
+}
+.page.two > *:last-child {
+  margin-bottom: 0;
+}
+.page.two .image {
+  margin-top: 0.5rem;
+}
+.page.two .select-info {
+  display: grid;
+  align-content: center;
+  width: fit-content;
+  padding: 0 1.5rem;
+  margin: 1.5rem 0;
+  background: rgba(149, 158, 172, 0.2);
+  color: #fda05e;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 16px;
+}
+.page.two .header {
+  margin-bottom: 0;
+}
+.page.two .text {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.page.two {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
