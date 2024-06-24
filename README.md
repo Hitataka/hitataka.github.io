@@ -17,3 +17,6 @@ https://hitataka.github.io/Frontend%20Mentor/05_ResultSummary/index.html<br/>
 <br/>
 06 PRODUCT CARD - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/06_ProductCard/index.html<br/>
+<br/>
+07 INTERACTIVE RATING - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/07_InteractiveRating/index.html<br/>
