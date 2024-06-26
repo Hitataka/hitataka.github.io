@@ -1,0 +1,106 @@
+// VAR =====
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$blueMain: hsl(217, 54%, 11%);
+$blueCard: hsl(216, 50%, 16%);
+$blueLine: hsl(215, 32%, 27%);
+
+@font-face {
+    font-family: Outfit;
+    src: url(../asset/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Outfit, Calibri, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: $blueMain;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 500px;
+    border-radius: 1rem;
+    margin: 4rem 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 2vw 0 1vw rgba(black, .1),
+                0 2vw 0 3vw rgba(black, .1);
+    background: $blueCard;
+    color: white;
+    display: grid;
+    &>*{margin: .75rem 0;}
+    &>*:first-child{margin-top: 0rem;}
+    &>*:last-child{margin-bottom: .5rem;}
+}
+
+// Image
+.image{
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    img{
+        width: 100%;
+        &.eye{position: absolute; width: 15%;}
+    }
+    .hov-filter{
+        position: absolute;
+        background: rgba($cyan, .5);
+        width: 100%;
+        height: 100%;
+    }
+    .eye, .hov-filter{display: none;}
+}
+// Text
+.heading{margin-top: 1.25rem; cursor: pointer;}
+.heading:hover{color: $cyan;}
+.paragraf{color: $softBlue; font-size: 18px; line-height: 28px;}
+// Price
+.price{
+    display: flex;
+    justify-content: space-between;
+    .left, .right{
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        img{margin-right: .5rem; height: 20px;}
+    }
+    .left{color: $cyan;}
+    .right{color: $softBlue;}
+}
+// Hr-Line
+.hr-line{
+    height: 2px; width: 100%;
+    background: $blueLine;
+}
+// User
+.user{
+    display: flex;
+    align-items: center;
+    span{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        border: 2px solid white;
+        overflow: hidden;
+        display: grid; place-content: center;
+        img{
+            filter: invert(1);
+            color: white;
+            margin-top: 10px;
+            height: 2rem;
+        }
+    }
+    p{
+        color: $softBlue;
+        a{color: white; text-decoration: none;}
+        a:hover{color: $cyan;}
+    }
+}
+
+

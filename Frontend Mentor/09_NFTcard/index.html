@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>QR CODE - Frontend Mentor</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Image -->
+        <div class="image">
+            <img src="./asset/images/image-equilibrium.jpg" alt="BG_IMG" />
+            <span class="hov-filter"></span>
+            <img class="eye" src="./asset/images/icon-view.svg" alt="Eye_IMG" />
+        </div>
+
+        <!-- Text -->
+        <h2 class="heading">Equilibrium #3429</h2>
+        <p class="paragraf">Our Equilibrium collection promotes 
+            balance and calm.
+        </p>
+
+        <!-- Price -->
+        <div class="price">
+        <span class="left"> <img src="./asset/images/icon-ethereum.svg" alt="Eter_Icon">
+            <p>0.041 ETH</p> </span>
+        <span class="right"> <img src="./asset/images/icon-clock.svg" alt="Clock_Icon">
+            <p>3 days left</p> </span>
+        </div>
+        
+        <!-- Hr-Line -->
+        <div class="hr-line"></div>
+
+        <!-- User -->
+        <div class="user">
+            <span><img src="./asset/images/user.png" alt="Avatar_Img" /></span>
+            <p>Creation of <a href="#">Ousure Names</a></p>
+        </div>
+    </div>
+
+    <!-- JS -->
+     <script>
+        const hovImg = document.querySelector(".image");
+        const hovFilter = document.querySelector(".image .hov-filter");
+        const hovEye = document.querySelector(".image .eye");
+
+        hovImg.onmouseover = function(){
+            hovFilter.style.display = "block";
+            hovEye.style.display = "block";
+        }
+        hovImg.onmouseout = function(){
+            hovFilter.style.display = "none";
+            hovEye.style.display = "none";
+        }
+
+
+     </script>
+</body>
+</html>
