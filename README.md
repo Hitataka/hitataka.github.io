@@ -26,3 +26,6 @@ https://hitataka.github.io/Frontend%20Mentor/08_QRcode/index.html<br/>
 <br/>
 09 NFT CARD - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/09_NFTcard/index.html<br/>
+<br/>
+10 ORDER SUMMARY - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/10_OrderSummary/index.html<br/>
