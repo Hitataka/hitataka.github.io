@@ -29,3 +29,6 @@ https://hitataka.github.io/Frontend%20Mentor/09_NFTcard/index.html<br/>
 <br/>
 10 ORDER SUMMARY - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/10_OrderSummary/index.html<br/>
+<br/>
+11 STATS PREVIEW CARD - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/11_StatsPreviewCard/index.html<br/>
