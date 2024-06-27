@@ -1,0 +1,93 @@
+// VAR =====
+$main: hsl(233, 47%, 7%);
+$cardBG: hsl(244, 38%, 16%);
+$softViolet: hsl(277, 64%, 61%);
+$paragraf: hsla(0, 0%, 100%, 0.6);
+
+@font-face {
+    font-family: Inter;
+    src: url(../asset/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+    font-family: LexandDeca;
+    src: url(../asset/fonts/LexendDeca-VariableFont_wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: LexandDeca, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: $main;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 1100px;
+    margin: 6% 8%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: $cardBG;
+    color: white;
+    display: grid;
+}
+// Image
+.image{
+    width: 100%;
+    height: 260px;
+    background: $softViolet;
+    display: grid;
+    span{
+        width: 100%; height: 100%;
+        filter: brightness(1.1) grayscale(1) opacity(.5);
+        background-image: url(../asset/images/pexels-fotios-photos-1957478.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+// Content
+.content{
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    &>*{margin-bottom: 1.5rem;}
+    &>*:last-child{margin-bottom: 0;}
+    // Heading & Paragraf
+    .heading{ span{color: $softViolet;} }
+    .paragraf{color: $paragraf; line-height: 24px; word-spacing: 3px;}
+    // info
+    .info{display: grid; span{
+        display: grid;
+        margin: 1rem 0;
+        b{font-size: 1.75rem;}
+        p{color: $paragraf;}
+    }}
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{display: flex; margin: 2rem 10%;}
+    .image, .content{width: 50%; height: 100%;}
+    .content{order: 1; padding: 3rem 2rem;}
+    .image{order: 2;
+        span{background-position: 0 center;}
+    }
+}
+@media screen and (min-width: 1024px) {
+    .image{width: 45%;}
+    .content{width: 55%; 
+        text-align: left;
+        padding: 3rem 5rem 3rem 3rem;
+        .info{
+            display: flex;
+            justify-content: space-between;
+            span{text-align: left;}
+            span b{margin-bottom: 4px;}
+        }
+    }
+}
+
+
