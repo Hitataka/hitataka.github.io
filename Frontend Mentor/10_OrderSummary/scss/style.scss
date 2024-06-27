@@ -1,0 +1,91 @@
+// VAR =====
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleblue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url(../asset/fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: RedHatDisplay, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: $paleBlue;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 400px;
+    margin: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 16px 0 rgba($desaturatedBlue, .3);
+    display: grid;
+    &>*{margin: 1rem 2rem;}
+    &>*:first-child{margin: 0 0 1rem 0;}
+}
+
+// Img
+.image-hero{
+    width: 100%;
+}
+// Text
+.text{
+    text-align: center;
+    margin: 1rem 3rem;
+    .heading{margin-bottom: 1rem; font-size: 1.75rem; color: $darkBlue;}
+    .paragraf{color: $desaturatedBlue;}
+}
+// Music
+.music{
+    margin: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    img{margin-right: 1.5rem; height: 3.5rem;}
+    .info{
+        height: 100%;
+        display: grid;
+        align-content: space-around;
+        b{color: $darkBlue;}
+        p{color: $desaturatedBlue;}
+    }
+    a{
+        margin-left: auto; 
+        font-weight: bold; 
+        color: $brightBlue;
+        &:hover{color: $desaturatedBlue;}
+    }
+}
+// Button
+.btn{
+    display: grid;
+    button{
+        cursor: pointer;
+        border: none;
+        padding: 1rem 0;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .btn-proc{
+        background: $brightBlue; color: white;
+        box-shadow: 0 12px 12px 0 rgba($desaturatedBlue, .4);
+        &:hover{background: $desaturatedBlue;}
+    }
+    .btn-ccl{
+        width: fit-content;
+        padding: 0;
+        margin: 1.5rem auto;
+        background: none;
+        color: $desaturatedBlue; 
+        &:hover{color: $darkBlue;}
+    }
+}

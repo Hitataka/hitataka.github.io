@@ -1,0 +1,109 @@
+@font-face {
+  font-family: RedHatDisplay;
+  src: url(../asset/fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: RedHatDisplay, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(225, 100%, 94%);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 16px 0 rgba(114, 128, 167, 0.3);
+  display: grid;
+}
+.container > * {
+  margin: 1rem 2rem;
+}
+.container > *:first-child {
+  margin: 0 0 1rem 0;
+}
+
+.image-hero {
+  width: 100%;
+}
+
+.text {
+  text-align: center;
+  margin: 1rem 3rem;
+}
+.text .heading {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: hsl(223, 47%, 23%);
+}
+.text .paragraf {
+  color: hsl(224, 23%, 55%);
+}
+
+.music {
+  margin: 1rem 3rem;
+  display: flex;
+  align-items: center;
+}
+.music img {
+  margin-right: 1.5rem;
+  height: 3.5rem;
+}
+.music .info {
+  height: 100%;
+  display: grid;
+  align-content: space-around;
+}
+.music .info b {
+  color: hsl(223, 47%, 23%);
+}
+.music .info p {
+  color: hsl(224, 23%, 55%);
+}
+.music a {
+  margin-left: auto;
+  font-weight: bold;
+  color: hsl(245, 75%, 52%);
+}
+.music a:hover {
+  color: hsl(224, 23%, 55%);
+}
+
+.btn {
+  display: grid;
+}
+.btn button {
+  cursor: pointer;
+  border: none;
+  padding: 1rem 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.btn .btn-proc {
+  background: hsl(245, 75%, 52%);
+  color: white;
+  box-shadow: 0 12px 12px 0 rgba(114, 128, 167, 0.4);
+}
+.btn .btn-proc:hover {
+  background: hsl(224, 23%, 55%);
+}
+.btn .btn-ccl {
+  width: fit-content;
+  padding: 0;
+  margin: 1.5rem auto;
+  background: none;
+  color: hsl(224, 23%, 55%);
+}
+.btn .btn-ccl:hover {
+  color: hsl(223, 47%, 23%);
+}/*# sourceMappingURL=style.css.map */
