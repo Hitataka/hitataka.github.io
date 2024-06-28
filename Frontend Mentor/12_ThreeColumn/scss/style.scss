@@ -1,0 +1,100 @@
+// VAR =====
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$transWhite: hsla(0, 0%, 100%, 0.7);
+$veryLightGray: hsl(0, 0%, 95%);
+
+@font-face {
+    font-family: LexandDeca;
+    src: url(../asset/fonts/LexendDeca-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: BigShoulder;
+    src: url(../asset/fonts/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: LexandDeca, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: white;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 12% 8%;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    display: grid;
+}
+
+// Col
+.col{
+    padding: 3.5rem 3.5rem;
+    display: grid;
+    &>*{margin-bottom: 1.5rem;}
+    &>*:last-child{margin-bottom: 0;}
+
+    .icon{height: 3rem;}
+    .heading{
+        font-size: 2.5rem; 
+        font-family: BigShoulder;
+    }
+    .paragraf{
+        font-size: 1rem; 
+        line-height: 28px;
+        word-spacing: 2px;
+        color: $transWhite;
+    }
+    .link{
+        text-decoration: none;
+        align-self: end;
+        padding: 0 1.75rem;
+        margin-top: 1.5rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+        width: fit-content;
+        align-content: center;
+        background: white;
+        border: 2px solid white;
+        &:hover {
+            background: none;
+            color: white !important;
+        }
+    }
+}
+.col.one{background: $brightOrange;
+    .link{color: $brightOrange;}}
+.col.two{background: $darkCyan;
+    .link{color: $darkCyan;}}
+.col.three{background: $veryDarkCyan;
+    .link{color: $veryDarkCyan;}}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .container{display: flex; margin: 5% 8%;}
+    .col{
+        padding: 3.5rem 1.75rem; 
+        justify-items: center; 
+        text-align: center;
+        & .link{margin-top: 3rem;}
+    }
+}
+@media screen and (min-width: 1024px) {
+    .col{
+        padding: 3.5rem 4rem 3.5rem 3rem; 
+        justify-items: left; 
+        text-align: left;
+    }
+
+
+}
+
+
