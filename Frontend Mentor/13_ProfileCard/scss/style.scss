@@ -1,0 +1,114 @@
+// VAR =====
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGrayishBlue: hsl(227, 10%, 46%);
+$darkGray: hsl(0, 0%, 59%);
+
+@font-face {
+    font-family: KumbhSans;
+    src: url(../asset/fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: KumbhSans, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: white;
+    display: grid;
+    place-content: center;
+}
+// BG CIR
+.bgcir{
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%; height: 100%;
+    background: $darkCyan;
+    .up, .down{
+        position: absolute;
+        height: 100%; width: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    & .up{left: -45%; top: -40%;
+        background-image: url(../asset/images/bg-pattern-top.svg);}
+    & .down{right: -45%; bottom: -40%;
+        background-image: url(../asset/images/bg-pattern-bottom.svg);}
+}
+// CARD
+.card{
+    z-index: 2;
+    margin: 8% 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    color: $veryDarkDesaturatedBlue;
+    background: white;
+    box-shadow: 0 2rem 4rem 0 rgba($veryDarkDesaturatedBlue, .25);
+    display: grid;
+    
+    // Bg-Up
+    .bg-up{
+        width: 100%;
+        height: 150px;
+        background: $darkCyan;
+        background-image: url(../asset/images/bg-pattern-card.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    // Content
+    .content{
+        position: relative;
+        width: 100%;
+        padding: 4rem 0 1.5rem 0;
+        display: grid;
+        justify-items: center;
+        .img-profile{
+            position: absolute;
+            width: 6rem; height: 6rem;
+            top: -3rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            display: grid; place-content: center;
+            i{font-size: 5rem; margin-top: 1.25rem;}
+        }
+        .user{
+            margin-bottom: 2rem;
+            display: grid;
+            justify-items: center;
+            b{font-size: 1.125rem; span{color: $darkGray; margin-left: .25rem;}}
+            p{color: $darkGray; margin-top: .25rem;}
+        }
+        .info{
+            padding: 1.5rem 1rem 0 1rem;
+            border-top: 2px solid rgba($darkGray, .5);
+            display: flex;
+            justify-content: space-between;
+            span{
+                margin: 0 2rem;
+                display: grid;
+                justify-items: center;
+                b{font-size: 1.125rem;}
+                p{color: $darkGray; margin-top: .25rem;}
+            }
+        }
+    }
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    .bgcir .up{left: -40%; top: -45%;}
+    .bgcir .down{right: -40%; bottom: -45%;}
+}
+@media screen and (min-width: 1024px) {
+    .bgcir .up{left: -30%; top: -45%;}
+    .bgcir .down{right: -30%; bottom: -45%;}
+}
+
+
