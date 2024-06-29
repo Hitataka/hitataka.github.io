@@ -35,3 +35,6 @@ https://hitataka.github.io/Frontend%20Mentor/11_StatsPreviewCard/index.html<br/>
 <br/>
 12 THREE COLUMN - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/12_ThreeColumn/index.html<br/>
+<br/>
+13 PROFILE CARD - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/13_ProfileCard/index.html<br/>
