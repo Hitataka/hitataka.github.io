@@ -39,5 +39,5 @@ https://hitataka.github.io/Frontend%20Mentor/12_ThreeColumn/index.html<br/>
 13 PROFILE CARD - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/13_ProfileCard/index.html<br/>
 <br/>
-13 SOCIAL PROOF - Frontend Mentor :<br/>
+14 SOCIAL PROOF - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/14_SocialProof/index.html<br/>
