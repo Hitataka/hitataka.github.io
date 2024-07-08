@@ -41,3 +41,6 @@ https://hitataka.github.io/Frontend%20Mentor/13_ProfileCard/index.html<br/>
 <br/>
 14 SOCIAL PROOF - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/14_SocialProof/index.html<br/>
+<br/>
+15 ARTICLE PREVIEW - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/15_ArticlePreview/index.html<br/>
