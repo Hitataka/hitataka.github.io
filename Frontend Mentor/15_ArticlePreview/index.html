@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Article Preview - Frontend Mentor</title>
+</head>
+<body>
+    <div class="container">
+        <!-- IMG LEFT -->
+        <div class="img left"></div>
+
+        <!-- CONTENT RIGHT -->
+        <div class="content right">
+            <!-- Heading -->
+            <h3 class="heading">Shift the overall look and feel by adding these 
+                wonderful touches to furniture in you home
+            </h3>
+            <!-- Paragraf -->
+             <p class="paragraf">Ever been in a room and felt like something 
+                was missing? Perhaps it felt slightly bare and uninviting. 
+                I've got some simple tips to help you make any room feel complete.
+            </p>
+            <!-- Footer -->
+            <div class="footer">
+                <!-- user -->
+                <div class="user">
+                    <span class="photo"><i class="fas fa-user"></i></span>
+                    <span class="texts">
+                        <b class="name">Michelle Appleton</b>
+                        <p class="date">08 Jul 2024</p>
+                    </span>
+                    <button class="share"><img src="./asset/images/icon-share.svg" alt="Icon_Share"></button>
+                </div>
+                <!-- links -->
+                <div class="links">
+                    <b class="text">SHARE</b>
+                    <span class="social">
+                        <a href="#"><img src="./asset/images/icon-facebook.svg" alt="Icon"></a>
+                        <a href="#"><img src="./asset/images/icon-twitter.svg" alt="Icon"></a>
+                        <a href="#"><img src="./asset/images/icon-pinterest.svg" alt="Icon"></a>
+                    </span>
+                    <button class="share"><img src="./asset/images/icon-share.svg" alt="Icon_Share"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <!-- JS -->
+    <script>
+        const BTN_User = document.querySelector(".footer .user button.share");
+        const BTN_Link = document.querySelector(".footer .links button.share");
+        const link = document.querySelector(".footer .links");
+
+        BTN_User.onclick = () => link.classList.toggle("active");
+        BTN_Link.onclick = () => link.classList.toggle("active");
+
+    </script>
+
+</body>
+</html>

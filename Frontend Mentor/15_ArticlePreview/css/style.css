@@ -1,0 +1,214 @@
+@font-face {
+  font-family: Manrope;
+  src: url(../asset/fonts/Manrope-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Manrope, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(210, 46%, 95%);
+  padding: 4rem 8%;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-width: 460px;
+  background: white;
+  box-shadow: 0 0 8px rgba(72, 85, 106, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+}
+
+.img.left {
+  width: 100%;
+  height: 250px;
+  background: hsl(217, 19%, 35%);
+  background-image: url(../asset/images/drawers.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.content.right {
+  display: grid;
+}
+.content.right .heading {
+  margin: 2.5rem 2rem 1rem;
+  color: hsl(217, 19%, 35%);
+}
+.content.right .paragraf {
+  margin: 1rem 2rem 2rem;
+  color: hsl(214, 17%, 51%);
+}
+.content.right .footer {
+  position: relative;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+.content.right .footer > * {
+  display: flex;
+  align-items: center;
+}
+.content.right .footer .user {
+  height: 4.5rem;
+  padding: 0 2rem;
+  background: white;
+  color: hsl(217, 19%, 35%);
+}
+.content.right .footer .user .photo {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  background: hsl(210, 46%, 95%);
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: 1rem;
+  display: grid;
+  place-content: center;
+}
+.content.right .footer .user .photo img {
+  height: 1.25rem;
+  translate: 9px 9px;
+}
+.content.right .footer .user .photo:hover {
+  background: hsl(214, 17%, 51%);
+}
+.content.right .footer .user .photo:hover img {
+  filter: brightness(2);
+}
+.content.right .footer .user .photo i {
+  font-size: 2rem;
+}
+.content.right .footer .user .photo:hover {
+  background: white;
+}
+.content.right .footer .user .texts {
+  display: grid;
+}
+.content.right .footer .user .texts .date {
+  color: hsl(212, 23%, 69%);
+  margin-top: 2px;
+}
+.content.right .footer .user .share {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  background: hsl(210, 46%, 95%);
+  margin-left: auto;
+}
+.content.right .footer .user .share img {
+  height: 1.25rem;
+  translate: 9px 9px;
+}
+.content.right .footer .user .share:hover {
+  background: hsl(214, 17%, 51%);
+}
+.content.right .footer .user .share:hover img {
+  filter: brightness(2);
+}
+.content.right .footer .links {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 2rem;
+  background: hsl(217, 19%, 35%);
+  color: white;
+}
+.content.right .footer .links .text {
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 6px;
+  margin-right: 1rem;
+}
+.content.right .footer .links .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content.right .footer .links .social a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.content.right .footer .links .social a img {
+  height: 1.5rem;
+}
+.content.right .footer .links .share {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  background: hsl(214, 17%, 51%);
+  margin-left: auto;
+}
+.content.right .footer .links .share img {
+  height: 1.25rem;
+  translate: 9px 9px;
+}
+.content.right .footer .links .share img {
+  filter: brightness(2);
+}
+.content.right .footer .links .share:hover {
+  background: hsl(210, 46%, 95%);
+}
+.content.right .footer .links .share:hover img {
+  filter: none;
+}
+.content.right .footer .links.active {
+  display: flex;
+  z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    overflow: unset;
+  }
+  .img.left {
+    width: 35%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+  }
+  .content.right {
+    width: 65%;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .content.right .footer .links {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    right: -85px;
+    top: -65px;
+  }
+  .content.right .footer .links .share {
+    display: none;
+  }
+  .content.right .footer .links::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: hsl(217, 19%, 35%);
+    left: calc(50% - 10px);
+    bottom: -10px;
+    rotate: 45deg;
+  }
+}
