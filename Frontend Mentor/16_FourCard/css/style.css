@@ -1,0 +1,114 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../asset/fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../asset/fonts/poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 5rem 8%;
+  background: white;
+  display: grid;
+}
+
+.text-head {
+  justify-self: center;
+  max-width: 400px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.text-head .heading {
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1rem;
+  font-size: 28px;
+}
+.text-head .heading span {
+  font-weight: normal;
+}
+.text-head .paragraf {
+  color: hsl(229, 6%, 66%);
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+}
+.cards .card {
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 1rem 0 rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  border-top: 6px solid;
+  background: white;
+  display: grid;
+}
+.cards .card .title {
+  color: hsl(234, 12%, 34%);
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+.cards .card .text {
+  color: hsl(229, 6%, 66%);
+  font-size: 16px;
+  margin-bottom: 2.5rem;
+}
+.cards .card .icon {
+  width: 100%;
+  text-align: right;
+}
+.cards .card .icon img {
+  height: 80px;
+}
+.cards .card:nth-child(1) {
+  border-color: hsl(180, 62%, 55%);
+}
+.cards .card:nth-child(2) {
+  border-color: hsl(0, 78%, 62%);
+}
+.cards .card:nth-child(3) {
+  border-color: hsl(34, 97%, 64%);
+}
+.cards .card:nth-child(4) {
+  border-color: hsl(212, 86%, 64%);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 5rem 6%;
+  }
+  .text-head {
+    margin-bottom: 3rem;
+    max-width: 50%;
+  }
+  .cards {
+    position: relative;
+    width: 100%;
+  }
+  .cards .card {
+    place-self: center;
+    width: calc(33.3333333333% - 2rem);
+    margin: 0;
+  }
+  .cards .card:nth-child(1) {
+    transform: translate(calc(-100% - 2rem), 0);
+    position: absolute;
+  }
+  .cards .card:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+  .cards .card:nth-child(4) {
+    transform: translate(calc(100% + 2rem), 0);
+    position: absolute;
+  }
+}

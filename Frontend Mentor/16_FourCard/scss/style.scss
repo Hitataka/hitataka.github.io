@@ -1,0 +1,97 @@
+// VAR =====
+$cyan: hsl(180, 62%, 55%);
+$red: hsl(0, 78%, 62%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+
+@font-face {
+    font-family: Poppins;
+    src: url(../asset/fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../asset/fonts/poppins/Poppins-Bold.ttf);
+    font-weight: bold;
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    min-height: 100vh;
+    padding: 5rem 8%;
+    background: white;
+    display: grid;
+}
+
+// HEADING
+.text-head{
+    justify-self: center;
+    max-width: 400px;
+    margin-bottom: 4rem;
+    text-align: center;
+    .heading{
+        span{font-weight: normal;}
+        color: $veryDarkBlue;
+        margin-bottom: 1rem;
+        font-size: 28px;
+    }
+    .paragraf{color: $grayishBlue; font-size: 18px;}
+}
+
+// CARDS
+.cards{
+    display: grid;
+    .card{
+        padding: 2rem 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 8px 1rem 0 rgba(black, .15);
+        border-radius: 8px;
+        border-top: 6px solid;
+        background: white;
+        display: grid;
+
+        .title{color: $veryDarkBlue; font-size: 24px; margin-bottom: .5rem;}
+        .text{color: $grayishBlue; font-size: 16px; margin-bottom: 2.5rem;}
+        .icon{
+            width: 100%; 
+            text-align: right;
+            img{height: 80px;}
+        }
+
+        &:nth-child(1){border-color: $cyan;}
+        &:nth-child(2){border-color: $red;}
+        &:nth-child(3){border-color: $orange;}
+        &:nth-child(4){border-color: $blue; margin-bottom: 0;}
+    }
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 1024px) {
+    body{
+        padding: 5rem 6%;
+    }
+    // HEADING
+    .text-head{margin-bottom: 3rem; max-width: 50%;}
+    // CARDS
+    .cards{
+        position: relative;
+        width: 100%;
+        .card{
+            place-self: center;
+            width: calc((100% / 3) - 2rem);
+            margin: 0;
+            &:nth-child(1){transform: translate(calc(-100% - 2rem), 0); position: absolute;}
+            &:nth-child(2){margin-bottom: 2rem;}
+            &:nth-child(3){}
+            &:nth-child(4){transform: translate(calc(100% + 2rem), 0); position: absolute;}
+        }
+    }
+
+}
+
