@@ -47,3 +47,6 @@ https://hitataka.github.io/Frontend%20Mentor/15_ArticlePreview/index.html<br/>
 <br/>
 16 FOUR CARD - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/16_FourCard/index.html<br/>
+<br/>
+17 BASE APPAREL - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/17_BaseApparel/index.html<br/>
