@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Base Apparel - Frontend Mentor</title>
+</head>
+<body>
+    <!-- HERO Desktop ***** -->
+    <div class="hero-img desktop"></div>
+
+    <!-- Page -->
+    <div class="page">
+        <!-- Heading -->
+        <div class="heading"><img class="icon" src="./asset/images/logo.svg" alt="Icon"></div>
+
+        <!-- HERO Phone ***** -->
+        <div class="hero-img mobile"></div>
+        <!-- Text -->
+        <div class="text">
+            <h1 class="title"><span>WE'RE</span></br>COMING</br>SOON</h1>
+            <p class="paragraf">Hello fellow shoppers! We're 
+                currently building our new fashion store. 
+                Add your email below to stay up-to-date 
+                with announcements and our launch deals.
+            </p>
+        </div>
+        <!-- User-Input -->
+        <div class="user-input">
+            <input type="email" name="email" id="email" placeholder="username@mail.com" />
+            <img class="icon" src="./asset/images/icon-error.svg" alt="Icon_Error">
+            <button class="btn"><span></span><span></span></button>
+            <p class="message">Please provide a valid email</p>
+        </div>
+    </div>
+        
+
+    <!-- JS -->
+     <script>
+        const userInput = document.querySelector(".page .user-input")
+        const emailVal      = userInput.querySelector("#email");
+        const btn           = userInput.querySelector(".btn");
+        const icon          = userInput.querySelector(".icon");
+        const msg           = userInput.querySelector(".message");
+
+        let cekVal = (x) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x);
+        btn.onmousedown = () => {
+            if ( cekVal(emailVal.value.toLowerCase()) ) {
+                btn.classList.add("true");
+                userInput.classList.add("true");
+            } else {
+                btn.classList.add("error");
+                userInput.classList.add("error");
+                icon.classList.add("error");
+                msg.classList.add("error");
+            }
+        };
+        btn.onmouseup = () => {
+            btn.classList.remove("true");
+            btn.classList.remove("error");
+            userInput.classList.remove("true");
+            userInput.classList.remove("error");
+            icon.classList.remove("error");
+            msg.classList.remove("error");
+        };
+
+     </script>
+
+</body>
+</html>
