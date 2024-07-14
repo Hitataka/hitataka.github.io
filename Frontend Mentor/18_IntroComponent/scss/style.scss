@@ -1,0 +1,162 @@
+// VAR =====
+$Red: hsl(0, 100%, 74%) ;
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$BlueDark: hsl(249, 10%, 26%); 
+$BlueGrayish: hsl(246, 25%, 77%);
+
+@font-face {
+    font-family: Poppins;
+    src: url(../asset/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../asset/fonts/Poppins-Bold.ttf);
+    font-weight: bold;
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    min-height: 100vh;
+    padding: 15% 8%;
+    color: white;
+    background: $Red;
+    background-image: url(../asset/images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+}
+
+// TEXT CONTENT
+.text-content{
+    text-align: center;
+    margin-bottom: 4.5rem;
+    display: grid;
+    place-content: center;
+    .heading{margin-bottom: 1.5rem;}
+    .paragraf{line-height: 1.75rem;}
+}
+
+// FORM
+.form{
+    display: grid;
+    &>*{border-radius: 8px;
+        box-shadow: 0 10px 2px rgba($BlueDark, 0.25);    
+    }
+    // Head
+    .head{
+        margin-bottom: 2rem;
+        padding: 1.5rem 15%;
+        text-align: center;
+        background: $Blue;
+    }
+    // Inputs
+    .inputs{
+        background: white;
+        color: $BlueDark;
+        padding: 7%;
+        display: grid;
+
+        label{
+            position: relative;
+            width: 100%; height: 3rem;
+            padding: 0 1rem;
+            margin-bottom: 2.5rem;
+            border: 2px solid $BlueDark;
+            border-radius: 4px;
+            background: white;
+            display: flex;
+            align-items: center;
+            
+            input{
+                width: calc(100% - 2.5rem); height: 100%;
+                border: none;
+                outline: none;
+                color: $BlueDark;
+                background: white;
+            }
+            img{height: 1.5rem; margin-left: auto; display: none;}
+            .text-ifelse{
+                position: absolute;
+                display: none;
+                right: 0;
+                font-size: 12px;
+                transform: translateY(2.5rem);
+            }
+        }
+        // FALSE
+        label.false{
+            border-color: $Red;
+            input{color: $Red;}
+            img{display: block;}
+            .text-ifelse{display: block; color: $Red;}
+        }
+        // TRUE
+        label.true{
+            border-color: $Green;
+            input{color: $Green;}
+            img{display: none;}
+            .text-ifelse{display: none;}
+        }
+        button{
+            cursor: pointer;
+            width: 100%; height: 3rem;
+            padding: 0 1rem;
+            margin: .75rem 0;
+            border-radius: 4px;
+            border: none;
+            background: $Green;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 2px rgba($BlueDark, 0.25);
+            &:hover{filter: saturate(1.2);}
+            &:active{background: lighten($Green, 15%);}
+        }
+        .text-agree{
+            padding: 0 1rem;
+            font-size: 12px;
+            text-align: center;
+            a{text-decoration: none; color: $Red;}
+        }
+
+    }
+
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    body{
+        padding: 4rem 15%;
+        .form .inputs{padding: 8% 7%;}
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        display: flex;
+        padding: 4rem 10%;
+        .text-content{
+            width: 55%; 
+            margin: 0; padding: 0 10% 0 0;
+            text-align: left;
+            .heading{
+                font-size: 3rem; 
+                line-height: 3.75rem; 
+                margin-bottom: 2rem;
+            }
+        }
+        .form{
+            width: 45%; 
+            .inputs{padding: 9% 8%;}
+        }
+    }
+
+}
+

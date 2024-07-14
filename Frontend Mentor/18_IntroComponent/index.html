@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>INTRO COMPONENT - Frontend Mentor</title>
+</head>
+<body>
+    <!-- TEXT CONTENT -->
+    <div class="text-content">
+        <h1 class="heading">Learn to code by watching others</h1>
+        <p class="paragraf">See how experienced developers solve 
+            problems in real-time. Watching scripted tutorials 
+            is great, but understanding how developers think 
+            is invaluable.
+        </p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form">
+        <!-- Head -->
+        <div class="head">
+            <p class="text"><b>Try it free 7 days</b> 
+            then $20/mo. thereafter</p>
+        </div>
+        <!-- Inputs -->
+        <div class="inputs">
+            <label for="fname">
+                <input type="text" name="inp" id="fname" placeholder="First Name" />
+                <img src="./asset/images/icon-error.svg" alt="Icon_Error" />
+                <p class="text-ifelse">edit in js</p>
+            </label>
+            <label for="lname">
+                <input type="text" name="inp" id="lname" placeholder="Last Name" />
+                <img src="./asset/images/icon-error.svg" alt="Icon_Error" />
+                <p class="text-ifelse">edit in js</p>
+            </label>
+            <label for="email">
+                <input type="email" name="inp" id="email" placeholder="yourmail@mail.com" />
+                <img src="./asset/images/icon-error.svg" alt="Icon_Error" />
+                <p class="text-ifelse">edit in js</p>
+            </label>
+            <label for="pass">
+                <input type="password" name="inp" id="pass"  placeholder="Password#123"/>
+                <img src="./asset/images/icon-error.svg" alt="Icon_Error" />
+                <p class="text-ifelse">edit in js</p>
+            </label>
+            <!-- btn -->
+            <button type="submit">CLAIM YOUR FREE TRIAL</button>
+            <p class="text-agree">By clicking the button you are agreeing to our 
+                <a href="#">Terms and Services</a>
+            </p>
+        </div>
+
+    </div>
+
+    
+    <!-- JS -->
+    <script>
+        let parent = document.querySelector(".form .inputs");
+        let inpList = parent.querySelectorAll("label");
+        let btn = parent.querySelector("button");
+
+        let inpObj = [
+            {name: "fname", obj: inpList[0],},
+            {name: "lname", obj: inpList[1],},
+            {name: "email", obj: inpList[2],},
+            {name: "pass", obj: inpList[3],}
+        ]
+
+        btn.onclick = () => {
+            for (let idx=0; idx < inpObj.length; idx++) {
+                let check = CheckTrue(inpObj[idx].name, inpObj[idx].obj);
+                if (check === false) {
+                    inpObj[idx].obj.classList.add("false");
+                    inpObj[idx].obj.classList.remove("true");
+                    inpObj[idx].obj.querySelector("p").innerText = `Your input "${inpObj[idx].name}" is wrong`;
+                }
+            }
+        }
+
+        function CheckTrue(name, obj) {
+            if (name === "fname") {
+                let test1 = /^[\sa-zA-Z]{2,20}$/.test(obj.querySelector("input").value);
+                let test2 = (obj.querySelector("input").value).replace(/\s/g, "").length > 1;
+                let test3 = obj.querySelector("input").value[0] !== " ";
+                if (test1 && test2 && test3) {
+                    obj.classList.add("true");
+                    obj.classList.remove("false");
+                    obj.querySelector("p").innerText = "Input True";
+                } else {return false}
+                
+            }else if (name === "lname") {
+                let test1 = /^[\sa-zA-Z]{2,20}$/.test(obj.querySelector("input").value);
+                let test2 = (obj.querySelector("input").value).replace(/\s/g, "").length > 1;
+                let test3 = obj.querySelector("input").value[0] !== " ";
+                if (test1 && test2 && test3) {
+                    obj.classList.add("true");
+                    obj.classList.remove("false");
+                    obj.querySelector("p").innerText = "Input True";
+                } else {return false}
+
+            }else if (name === "email") {
+                let regX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (regX.test(obj.querySelector("input").value)) {
+                    obj.classList.add("true");
+                    obj.classList.remove("false");
+                    obj.querySelector("p").innerText = "Input True";
+                } else {return false}
+                
+            }else if (name === "pass") {
+                let test1 = (obj.querySelector("input").value.length) > 8;
+                let test2 = /[\s]/.test(obj.querySelector("input").value) === false;
+                let test3 = /[a-z]/.test(obj.querySelector("input").value);
+                let test4 = /[A-Z]/.test(obj.querySelector("input").value);
+                let test5 = /[0-9]/.test(obj.querySelector("input").value);
+                if (test1 && test2 && test3 && test4 && test5) {
+                    obj.classList.add("true");
+                    obj.classList.remove("false");
+                    obj.querySelector("p").innerText = "Input True"
+                } else {return false}
+            }
+        }
+
+    </script>
+
+</body>
+</html>
