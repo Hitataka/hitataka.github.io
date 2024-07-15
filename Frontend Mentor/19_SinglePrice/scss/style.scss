@@ -1,0 +1,110 @@
+// VAR =====
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+
+@font-face {
+    font-family: Karla;
+    src: url(../asset/fonts/Karla-VariableFont_wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Karla, sans-serif;
+}
+body{
+    min-height: 100vh;
+    padding: 12% 8%;
+    background: $LightGray;
+    display: grid; place-content: center;
+}
+.parent.shadow{
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    box-shadow: 0 .5rem 1rem rgba($GrayishBlue, 0.5);
+}
+
+// ONE=====
+.parent > .one{
+    background: white;
+    padding: 2rem;
+    display: grid;
+    // heading
+    .heading{margin-bottom: 1.5rem;}
+    .heading.one{color: $Cyan; font-size: 1.75rem;}
+    .heading.two{color: $BrightYellow; font-size: 1.25rem;}
+    // paragraf
+    .paragraf{color: $GrayishBlue; line-height: 1.75rem;}
+}
+
+// TWO=====
+.parent > .two{
+    display: grid;
+    .side{padding: 2rem; color: white;}
+
+    // Left===
+    .side.left{
+        background: $Cyan;
+        display: grid;
+        .heading{font-size: 1.5rem; margin-bottom: 1rem;}
+        // price
+        .price{
+            margin-bottom: 2rem;
+            display: grid;
+            span{
+                display: flex; align-items: center;
+                margin-bottom: .25rem;
+                .val{font-size: 2.5rem; margin-right: 1rem}
+                .time{opacity: 60%; font-size: 1.25rem;}
+            }
+            .text{font-size: 1.25rem;}
+        }
+        // btn
+        .btn{
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            padding: 1rem 1.5rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            background: $BrightYellow;
+            color: white;
+            box-shadow: 0 8px 16px 0 rgba(black, 0.25);
+            &:hover{background: white; color: $BrightYellow;}
+            &:active{background: white; color: $Cyan;}
+        }
+    }
+
+    // Right===
+    .side.right{
+        display: grid;
+        background: lighten($Cyan, 5%);
+        .heading{font-size: 1.5rem; margin-bottom: 1rem;}
+        .list{
+            list-style: none;
+            opacity: 75%;
+            li{line-height: 1.5rem; font-size: 1rem;}
+        }
+    }
+
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    body{padding: 3rem 8%;}
+    .parent{max-width: 800px;}
+    .parent > .two{
+        display: flex;
+        .side{width: 50%;}
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .parent > .one{padding: 3rem;}
+    .parent > .two .side{padding: 3rem;}
+}
+

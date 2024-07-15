@@ -1,0 +1,140 @@
+@font-face {
+  font-family: Karla;
+  src: url(../asset/fonts/Karla-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Karla, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 12% 8%;
+  background: hsl(204, 43%, 93%);
+  display: grid;
+  place-content: center;
+}
+
+.parent.shadow {
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  box-shadow: 0 0.5rem 1rem rgba(152, 166, 189, 0.5);
+}
+
+.parent > .one {
+  background: white;
+  padding: 2rem;
+  display: grid;
+}
+.parent > .one .heading {
+  margin-bottom: 1.5rem;
+}
+.parent > .one .heading.one {
+  color: hsl(179, 62%, 43%);
+  font-size: 1.75rem;
+}
+.parent > .one .heading.two {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.25rem;
+}
+.parent > .one .paragraf {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.75rem;
+}
+
+.parent > .two {
+  display: grid;
+}
+.parent > .two .side {
+  padding: 2rem;
+  color: white;
+}
+.parent > .two .side.left {
+  background: hsl(179, 62%, 43%);
+  display: grid;
+}
+.parent > .two .side.left .heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.parent > .two .side.left .price {
+  margin-bottom: 2rem;
+  display: grid;
+}
+.parent > .two .side.left .price span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.parent > .two .side.left .price span .val {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.parent > .two .side.left .price span .time {
+  opacity: 60%;
+  font-size: 1.25rem;
+}
+.parent > .two .side.left .price .text {
+  font-size: 1.25rem;
+}
+.parent > .two .side.left .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: hsl(71, 73%, 54%);
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+}
+.parent > .two .side.left .btn:hover {
+  background: white;
+  color: hsl(71, 73%, 54%);
+}
+.parent > .two .side.left .btn:active {
+  background: white;
+  color: hsl(179, 62%, 43%);
+}
+.parent > .two .side.right {
+  display: grid;
+  background: #2fc6c4;
+}
+.parent > .two .side.right .heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.parent > .two .side.right .list {
+  list-style: none;
+  opacity: 75%;
+}
+.parent > .two .side.right .list li {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 3rem 8%;
+  }
+  .parent {
+    max-width: 800px;
+  }
+  .parent > .two {
+    display: flex;
+  }
+  .parent > .two .side {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .parent > .one {
+    padding: 3rem;
+  }
+  .parent > .two .side {
+    padding: 3rem;
+  }
+}
