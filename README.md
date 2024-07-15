@@ -53,3 +53,6 @@ https://hitataka.github.io/Frontend%20Mentor/17_BaseApparel/index.html<br/>
 <br/>
 18 INTRO COMPONENT - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor/18_IntroComponent/index.html<br/>
+<br/>
+19 SINGLE PRICE - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor/19_SinglePrice/index.html<br/>
