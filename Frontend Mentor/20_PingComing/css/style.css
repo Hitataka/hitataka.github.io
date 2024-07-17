@@ -1,0 +1,177 @@
+@font-face {
+  font-family: LibreFranklin;
+  src: url(../asset/fonts/LibreFranklin-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: LibreFranklin, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 12% 8%;
+  background: white;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: grid;
+}
+
+.header {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  justify-items: center;
+  color: hsl(209, 33%, 12%);
+}
+.header > * {
+  margin-bottom: 3rem;
+}
+.header .logo {
+  height: 2rem;
+}
+.header .texts {
+  display: grid;
+  text-align: center;
+}
+.header .texts .heading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: hsl(0, 0%, 59%);
+}
+.header .texts .heading b {
+  color: hsl(209, 33%, 12%);
+}
+.header .inputs {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+.header .inputs input {
+  width: calc(100% - 3rem);
+  height: 3.25rem;
+  padding: 0 2rem;
+  border-radius: 1.625rem;
+  border: 1px solid hsl(209, 33%, 12%);
+  font-size: 1rem;
+  outline-color: hsl(209, 33%, 12%);
+  color: hsl(209, 33%, 12%);
+  margin-bottom: 0.5rem;
+}
+.header .inputs input.true {
+  color: hsl(223, 87%, 63%);
+  border-color: hsl(223, 87%, 63%);
+  outline-color: hsl(223, 87%, 63%);
+}
+.header .inputs input.active {
+  color: hsl(354, 100%, 66%);
+  border-color: hsl(354, 100%, 66%);
+  outline-color: hsl(354, 100%, 66%);
+}
+.header .inputs .text-false {
+  display: none;
+  margin-bottom: 1.25rem;
+  color: hsl(354, 100%, 66%);
+  font-style: italic;
+  font-size: 14px;
+}
+.header .inputs .text-false.active {
+  display: block;
+}
+.header .inputs .btn {
+  width: calc(100% - 3rem);
+  height: 3.25rem;
+  padding: 0 2rem;
+  border-radius: 1.625rem;
+  border: 1px solid hsl(209, 33%, 12%);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  border: none;
+  color: white;
+  background: hsl(223, 87%, 63%);
+  font-weight: 600;
+}
+.header .inputs .btn:hover {
+  opacity: 0.75;
+}
+.header .inputs .btn:active {
+  background: white;
+  color: hsl(223, 87%, 63%);
+}
+
+.hero {
+  margin-bottom: 12rem;
+  display: grid;
+}
+.hero img {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+}
+.footer .icons {
+  width: 9rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .icons a {
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: grid;
+  place-content: center;
+}
+.footer .icons a i {
+  font-size: 1.25rem;
+  color: hsl(223, 87%, 63%);
+}
+.footer .icons a:hover {
+  background: hsl(223, 87%, 63%);
+}
+.footer .icons a:hover i {
+  color: white;
+}
+.footer .text {
+  color: hsl(0, 0%, 59%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 5% 10%;
+  }
+  .container {
+    max-width: 700px;
+  }
+  .header .texts .heading {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+  .header .inputs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .inputs > * {
+    margin: 0 !important;
+  }
+  .header .inputs input {
+    width: calc(70% - 1rem);
+  }
+  .header .inputs .text-false {
+    position: absolute;
+    left: 2rem;
+    top: 4rem;
+  }
+  .header .inputs .btn {
+    width: 30%;
+  }
+}
