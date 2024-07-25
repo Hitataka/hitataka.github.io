@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>EXPENSE CHART - Frontend Mentor</title>
+</head>
+<body>
+    <!-- HEADER===== -->
+    <div class="header flex">
+        <div class="texts grid">
+            <p class="info">My Balance</p>
+            <b class="val">$924.00</b>
+        </div>
+        <div class="logo">
+            <img src="./asset/images/logo.svg" alt="Logo">
+        </div>
+    </div>
+
+    <!-- CONTENT===== -->
+    <div class="content grid">
+        <!-- Title=== -->
+        <b class="title">Spending - Last 7 days</b>
+        <!-- Charts=== -->
+        <div class="charts flex">
+            <!-- 1 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$40.00</b> </div>
+                <p class="day">Mon</p>
+            </span>
+            <!-- 2 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$60.00</b> </div>
+                <p class="day">Tue</p>
+            </span>
+            <!-- 3 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$30.00</b> </div>
+                <p class="day">Wed</p>
+            </span>
+            <!-- 4 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$80.00</b> </div>
+                <p class="day">Thu</p>
+            </span>
+            <!-- 5 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$50.00</b> </div>
+                <p class="day">Fri</p>
+            </span>
+            <!-- 6 -->
+            <span class="chart grid">
+                <div class="shape max"> <b class="absval">$100.00</b> </div>
+                <p class="day">Sat</p>
+            </span>
+            <!-- 7 -->
+            <span class="chart grid">
+                <div class="shape"> <b class="absval">$70.00</b> </div>
+                <p class="day">Sun</p>
+            </span>
+        </div>
+        <!-- Xline=== -->
+        <div class="xline"></div>
+        <!-- Footer=== -->
+        <div class="footer flex">
+            <span class="text-left">
+                <p class="info">Total this month</p>
+                <b class="val">$430.00</b>
+            </span>
+            <span class="text-right">
+                <b class="val">+5.2%</b>
+                <p class="info">from last month</p>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>

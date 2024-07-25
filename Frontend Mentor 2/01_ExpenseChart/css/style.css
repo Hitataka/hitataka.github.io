@@ -1,0 +1,170 @@
+@font-face {
+  font-family: DMSans;
+  src: url(../asset/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: DMSans, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+b {
+  color: hsl(25, 47%, 15%);
+}
+
+p {
+  color: hsl(28, 10%, 53%);
+}
+
+body {
+  background: hsl(27, 66%, 92%);
+  min-height: 100vh;
+  padding: 2rem;
+  font-size: 14px;
+  display: grid;
+  place-content: center;
+}
+body > * {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.header.flex {
+  background: hsl(10, 79%, 65%);
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header.flex .texts.grid > * {
+  color: white;
+}
+.header.flex .texts.grid .info {
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+}
+.header.flex .texts.grid .val {
+  font-size: 1.5rem;
+}
+.header.flex .logo {
+  height: 2.5rem;
+}
+.header.flex .logo img {
+  height: 100%;
+}
+
+.content.grid {
+  min-width: 450px;
+  background: hsl(33, 100%, 98%);
+}
+.content.grid > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.content.grid .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.content.grid .charts.flex {
+  justify-content: space-between;
+}
+.content.grid .charts.flex .chart.grid {
+  width: 12%;
+  height: 14rem;
+  justify-items: center;
+  align-content: end;
+}
+.content.grid .charts.flex .chart.grid:nth-child(1) .shape {
+  height: 4rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(2) .shape {
+  height: 6rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(3) .shape {
+  height: 3rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(4) .shape {
+  height: 8rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(5) .shape {
+  height: 5rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(6) .shape {
+  height: 10rem;
+  background: hsl(186, 34%, 60%);
+}
+.content.grid .charts.flex .chart.grid:nth-child(7) .shape {
+  height: 7rem;
+  background: hsl(10, 79%, 65%);
+}
+.content.grid .charts.flex .chart.grid .shape {
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  margin-top: 2.25rem;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+.content.grid .charts.flex .chart.grid .shape:hover {
+  background: rgba(236, 119, 95, 0.7);
+}
+.content.grid .charts.flex .chart.grid .shape:hover .absval {
+  display: grid;
+}
+.content.grid .charts.flex .chart.grid .shape.max:hover {
+  background: rgba(118, 181, 188, 0.7);
+}
+.content.grid .charts.flex .chart.grid .shape.max:hover .absval {
+  display: grid;
+}
+.content.grid .charts.flex .chart.grid .shape .absval {
+  position: absolute;
+  border-radius: 4px;
+  padding: 0 6px;
+  line-height: 2rem;
+  top: -2.25rem;
+  color: white;
+  background: hsl(25, 47%, 15%);
+  display: none;
+}
+.content.grid .charts.flex .chart.grid .day {
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+}
+.content.grid .xline {
+  width: 100%;
+  height: 2px;
+  background: hsl(27, 66%, 92%);
+}
+.content.grid .footer.flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.content.grid .footer.flex .text-left .val {
+  font-size: 2rem;
+}
+.content.grid .footer.flex .text-right {
+  text-align: right;
+}
+.content.grid .footer.flex .text-right .val {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body > * {
+    padding: 1.75rem 2rem;
+  }
+}

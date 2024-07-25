@@ -1,0 +1,124 @@
+// VAR =====
+$brown-dark: hsl(25, 47%, 15%);
+$brown-med: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$cyan: hsl(186, 34%, 60%);
+$orange-pale: hsl(33, 100%, 98%);
+$red-soft: hsl(10, 79%, 65%);
+
+
+@font-face {font-family: DMSans;
+    src: url(../asset/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+
+// STYLE =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: DMSans, sans-serif;
+}
+
+.flex{display: flex;} .grid{display: grid;}
+b{color: $brown-dark;} p{color: $brown-med;}
+body{
+    background: $cream;
+    min-height: 100vh;
+    padding: 2rem;
+    font-size: 14px;
+    display: grid;
+    place-content: center;
+    &>*{padding: 1.5rem; border-radius: 1rem;}
+}
+
+// HEADER=====
+.header.flex{
+    background: $red-soft;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    
+    .texts.grid{
+        &>*{color: white;}
+        .info{font-size: 14px; margin-bottom: .25rem;}
+        .val{font-size: 1.5rem;}
+    }
+    .logo{
+        height: 2.5rem;
+        img{height: 100%;}
+    }
+}
+
+// CONTENT=====
+.content.grid{
+    min-width: 450px;
+    background: $orange-pale;
+    &>*:not(:last-child){margin-bottom: 1.5rem;}
+
+    // Title===
+    .title{font-size: 1.5rem; margin-bottom: .5rem;}
+    // Charts===
+    .charts.flex{
+        justify-content: space-between;
+        // Chart 1-7
+        .chart.grid{
+            width: 12%; height: calc(10rem + 4rem);
+            justify-items: center;
+            align-content: end;
+            &:nth-child(1) .shape{height: 4rem; background: $red-soft;}
+            &:nth-child(2) .shape{height: 6rem; background: $red-soft;}
+            &:nth-child(3) .shape{height: 3rem; background: $red-soft;}
+            &:nth-child(4) .shape{height: 8rem; background: $red-soft;}
+            &:nth-child(5) .shape{height: 5rem; background: $red-soft;}
+            &:nth-child(6) .shape{height: 10rem; background: $cyan;}
+            &:nth-child(7) .shape{height: 7rem; background: $red-soft;}
+            
+            .shape{// 10rem max
+                cursor: pointer;
+                position: relative;
+                border-radius: 4px;
+                margin-top: 2.25rem;
+                width: 100%;
+                display: grid;
+                justify-items: center;
+                &:hover{background: rgba($red-soft, .7); .absval{display: grid;}}
+                &.max:hover{background: rgba($cyan, .7); .absval{display: grid;}}
+                .absval{// 2rem + .25rem(mar-btm)
+                    position: absolute;
+                    border-radius: 4px;
+                    padding: 0 6px;
+                    line-height: 2rem;
+                    top: -2.25rem;
+                    color: white;
+                    background: $brown-dark;
+                    display: none;
+                }
+            }
+            .day{// 1.5rem + .25rem(mar-btm)
+                line-height: 1.5rem;
+                margin-top: .25rem;
+            }
+        }
+    }
+    // Xline===
+    .xline{width: 100%; height: 2px; background: $cream;}
+    // Footer===
+    .footer.flex{
+        justify-content: space-between;
+        align-items: center;
+        .text-left{.val{font-size: 2rem;}}
+        .text-right{.val{font-size: 1rem;} text-align: right;}
+    }
+
+}
+
+
+// RESPONSIVE =====
+@media screen and (min-width: 768px) {
+    body>*{padding: 1.75rem 2rem;}
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+}
+
