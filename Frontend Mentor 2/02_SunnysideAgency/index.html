@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SUNNYSIDE AGENCY - Frontend Mentor</title>
+</head>
+<body>
+    <!-- HEADER===== -->
+    <div class="header grid">
+        <!-- Head -->
+        <div class="head flex">
+            <b class="title">sunnyside</b>
+            <div class="menu"><img src="./asset/images/icon-hamburger.svg" alt="Menu" /></div>
+            <div class="links">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#" class="btn">CONTACT</a>
+                <svg height="30px" width="30px"><polygon points="30,0 30,30 0,30"></polygon></svg>
+            </div>
+        </div>
+        <!-- Heading -->
+        <div class="heading grid">
+            <b>WE ARE CREATIVES</b>
+            <img src="./asset/images/icon-arrow-down.svg" alt="ArrowIcon">
+        </div>
+    </div>
+
+    <!-- CONTENT===== -->
+    <div class="content">
+        <!-- 1 -->
+        <div class="ctn one">
+            <span class="text">
+                <b>Transform your brand</b>
+                <p>We are full-service creative agency specializing in 
+                    helping brands grow fast. Engage your clients through 
+                    compelling visuals that do most of the marketing 
+                    for you.
+                </p>
+                <a href="# .content .ctn.one">LEARN MORE</a>
+            </span>
+            <span class="bg"><img src="./asset/images/desktop/image-transform.jpg" alt="IMG"></span>
+        </div>
+        <!-- 2 -->
+        <div class="ctn two">
+            <span class="text">
+                <b>Stand out to the right audience</b>
+                <p>Using a collaborative formula of designers, researchers, 
+                    photographers, videographers, and copywriters, we'll 
+                    build and extend your brand in digital places.
+                </p>
+                <a href="# .content .ctn.two">LEARN MORE</a>
+            </span>
+            <span class="bg"><img src="./asset/images/desktop/image-stand-out.jpg" alt="IMG"></span>
+        </div>
+        <!-- 3 -->
+        <div class="ctn three">
+            <span class="bg-text one">
+                <b>Graphic Design</b>
+                <p>Great design makes you memorable. We deliver artwork that 
+                    underscores your brand message and captures potential 
+                    clients'attention.
+                </p>
+            </span>
+            <span class="bg-text two">
+                <b>Photography</b>
+                <p>Increase your credibility by getting the most stunning, 
+                    high-quality photos that improve your business image.
+                </p>
+            </span>
+        </div>
+
+    </div>
+    
+    <!-- USERS===== -->
+    <div class="users">
+        <b class="title">CLIENT TESTIMONIALS</b>
+        <div class="list">
+            <!-- 1 -->
+            <span class="user">
+                <span class="photo"><i class="fa fa-fas fa-fw fa-user"></i></span>
+                <p>We put our trust in Sunnyside and they delivered, making 
+                    sure our needs were met and deadlines were always hit.
+                </p>
+                <div class="info">
+                    <b class="name">Emily R.</b>
+                    <p>Marketing Director</p>
+                </div>
+            </span>
+            <!-- 2 -->
+            <span class="user">
+                <span class="photo"><i class="fa fa-fas fa-fw fa-user"></i></span>
+                <p>Sunnyside's enthusiasm coupled with their keen interest 
+                    in our brand's success made it a satisfying and enjoyable 
+                    experience.
+                </p>
+                <div class="info">
+                    <b class="name">Thomas S.</b>
+                    <p>Chief Operating Officer</p>
+                </div>
+            </span>
+            <!-- 3 -->
+            <span class="user">
+                <span class="photo"><i class="fa fa-fas fa-fw fa-user"></i></span>
+                <p>Incredible end result! Our sales increased over 400% when 
+                    we worked with Sunnyside. Highly recommended!
+                </p>
+                <div class="info">
+                    <b class="name">Jennie F.</b>
+                    <p>Business Owner</p>
+                </div>
+            </span>
+            
+        </div>
+    </div>
+
+    <!-- IMAGES===== -->
+    <div class="images">
+        <span><img src="./asset/images/desktop/image-gallery-milkbottles.jpg" alt="IMG1"></span>
+        <span><img src="./asset/images/desktop/image-gallery-orange.jpg" alt="IMG2"></span>
+        <span><img src="./asset/images/desktop/image-gallery-cone.jpg" alt="IMG3"></span>
+        <span><img src="./asset/images/desktop/image-gallery-sugarcubes.jpg" alt="IMG4"></span>
+    </div>
+
+    <!-- FOOTER===== -->
+    <div class="footer grid">
+        <b>sunnyside</b>
+        <div class="links">
+            <a href="# .footer">About</a>
+            <a href="# .footer">Services</a>
+            <a href="# .footer">Projects</a>
+        </div>
+        <div class="social">
+            <a href="# .footer"><i class="fa fa-brands fa-fw fa-facebook"></i></a>
+            <a href="# .footer"><i class="fa fa-brands fa-fw fa-instagram"></i></a>
+            <a href="# .footer"><i class="fa fa-brands fa-fw fa-twitter"></i></a>
+            <a href="# .footer"><i class="fa fa-brands fa-fw fa-pinterest"></i></a>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script>
+        const btnMenu = document.querySelector(".header .head .menu");
+        const menu = document.querySelector(".header .head .links");
+
+        btnMenu.onclick = function() {menu.classList.toggle('active')};
+    </script>
+
+</body>
+</html>
