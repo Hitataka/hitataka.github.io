@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./output.css">
+    <title>SocialLink Tailwindcss</title>
+</head>
+
+<body class="px-8 py-6 bg-neutral-900 text-white font-Inter md:py-12">
+    <!-- =========================== -->
+    <!-- ===== CONTAINER START ===== -->
+    <!-- =========================== -->
+    <div id="container" class="grid px-10 py-12 bg-neutral-800 rounded-lg
+        max-w-[550px] mx-auto">
+
+        <!-- +++++ USER START +++++ -->
+        <div id="user" class="grid justify-items-center mb-6">
+            <!-- ===== Photo ===== -->
+            <span id="photo" class="w-[6.5rem] h-[6.5rem] mb-4
+                bg-neutral-700 grid place-content-center
+                border-2 rounded-full overflow-hidden">
+                <i class="fa fa-fas fa-user text-[6rem] mt-[1.75rem]"></i>
+            </span>
+            <!-- ===== Name & Info ===== -->
+            <p id="name" class="text-[2rem] font-bold h-[2.5rem]">Yuuour Name</p>
+            <p id="info" class="text-[1.25rem] font-bold text-lime-400">City, Country</p>
+        </div>
+        <!-- +++++ USER END +++++ -->
+
+
+        <!-- +++++ TEXT START +++++ -->
+        <div id="text" class="mb-6 text-center">
+            <p>"Front-end developer and other. Add some text or sentences here."</p>
+        </div>
+        <!-- +++++ TEXT END +++++ -->
+
+
+        <!-- +++++ LINKS START +++++ -->
+        <div id="links" class="grid text-[1.25rem] text-center font-bold space-y-4
+            [&>a]:w-full [&>a]:leading-[3rem] [&>a]:bg-neutral-700 [&>a]:rounded-md
+            [&>a:hover]:bg-lime-400 [&>a:hover]:text-neutral-800">
+            <a href="#">Github</a>
+            <a href="#">Frontend Mentor</a>
+            <a href="#">Linkedin</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <!-- +++++ LINK END +++++ -->
+
+    </div>
+    <!-- ========================= -->
+    <!-- ===== CONTAINER END ===== -->
+    <!-- ========================= -->
+</body>
+
+</html>
