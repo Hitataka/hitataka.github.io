@@ -11,3 +11,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/03_BlogCard_Tailwindcss/src/in
 <br/>
 04 Accordion FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/04_Accordion_Tailwindcss/src/index.html<br/>
+<br/>
+05 ResultSummary FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/05_ResultSummary_Tailwindcss/src/index.html<br/>
