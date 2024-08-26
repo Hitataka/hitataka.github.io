@@ -8,3 +8,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/02_SocialLink_Tailwindcss/src/
 <br/>
 03 BlogCard FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/03_BlogCard_Tailwindcss/src/index.html<br/>
+<br/>
+04 Accordion FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/04_Accordion_Tailwindcss/src/index.html<br/>
