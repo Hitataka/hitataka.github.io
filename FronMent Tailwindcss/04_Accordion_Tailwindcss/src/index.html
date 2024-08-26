@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Accordion Tailwindcss</title>
+</head>
+
+<body class="grid place-content-center px-[3rem] py-[2.5rem] min-h-[100vh] font-WorkSans">
+    <!-- ***** MY HERO BG Start ***** -->
+    <div class="myHeroBg w-full h-[35vh] absolute justify-self-center top-0"></div>
+    <!-- ***** MY HERO BG End ***** -->
+    
+    <!-- =========================== -->
+    <!-- ===== CONTAINER START ===== -->
+    <!-- =========================== -->
+    <div id="container" class="max-w-[560px] bg-white z-10 px-[1.75rem] py-[1.25rem]
+        rounded-lg overflow-hidden shadow-xl">
+
+        <!-- ===== HEADING Start ===== -->
+        <div id="heading" class="flex items-center mb-[1.5rem] mt-[.5rem]">
+            <img src="../assets/images/icon-star.svg" alt="Icon_Star" class="h-[2rem]" />
+            <b class="pl-[1rem] text-[2rem]">FAQs</b>
+        </div>
+        <!-- ===== HEADING End ===== -->
+
+
+        <!-- ===== Article Start ===== -->
+        <article id="articles" class="grid
+            [&>details]:border-b-[1px] [&>details]:border-gray-300 [&>details]:mb-[1.75rem] [&>details]:py-[.25rem]
+            [&_summary]:flex [&_summary]:justify-between [&_summary]:items-center [&_summary]:cursor-pointer
+            [&_b]:text-[1.125rem] [&_b]:w-[80%] [&_b]:leading-[1.5rem]
+            [&_p]:leading-[1.25rem] [&_p]:py-[1rem] [&_p]:text-gray-500">
+
+            <!-- Detail 1 -->
+            <details>
+                <summary>
+                    <b>What is Frontend Mentor, and how will it help me?</b>
+                    <img src="../assets/images/icon-plus.svg" alt="Icon_PlusMinus">
+                </summary>
+                <p>Frontend Mentor offers realistic coding challenges 
+                    to help developers improve their frontend coding 
+                    skills with projects in HTML, CSS, and JavaScript. 
+                    It's suitable for all levels and ideal for 
+                    portfolio building.</p>
+            </details>
+
+            <!-- Detail 2 -->
+            <details>
+                <summary>
+                    <b>Is Frontend Mentor free?</b>
+                    <img src="../assets/images/icon-plus.svg" alt="Icon_PlusMinus">
+                </summary>
+                <p>Yes, Frontend Mentor offers both free and premium 
+                    coding challenges, with the free option providing 
+                    access to a range of projects suitable for all 
+                    skill levels.</p>
+            </details>
+
+            <!-- Detail 3 -->
+            <details>
+                <summary>
+                    <b>Can I use Frontend Mentor projects im my portfolio?</b>
+                    <img src="../assets/images/icon-plus.svg" alt="Icon_PlusMinus">
+                </summary>
+                <p>Yes, you can use projects completed on Frontend Mentor 
+                    in your portfolio. It's an excellent way to showcase 
+                    your skills to potential employers!</p>
+            </details>
+
+            <!-- Detail 4 -->
+            <details>
+                <summary>
+                    <b>How can I get help if I'm suck on a challange?</b>
+                    <img src="../assets/images/icon-plus.svg" alt="Icon_PlusMinus">
+                </summary>
+                <p>The best place to get help is inside Frontend 
+                    Mentor's Discord community. There's a help channel 
+                    where you can ask questions and seek support from 
+                    other community members.</p>
+            </details>
+
+        </article>
+        <!-- ===== LIST Start ===== -->
+
+    </div>
+    <!-- ========================= -->
+    <!-- ===== CONTAINER END ===== -->
+    <!-- ========================= -->
+    
+
+    
+    <!-- **************************** -->
+    <!-- ***SCRIPT*** JS ***SCRIPT*** -->
+    <!-- **************************** -->
+    <script>
+        const artList = document.querySelectorAll('#articles details');
+
+        // FUNCTION =====
+        function itemClick(x){
+            x.classList.toggle('act');
+                
+            if (x.classList.contains('act')) {
+                x.querySelector('summary img').src = 
+                    "../assets/images/icon-minus.svg";
+            }else {
+                x.querySelector('summary img').src = 
+                    "../assets/images/icon-plus.svg";
+            }
+        }
+
+        // LOOP CLICK =====
+        for (let i=0; i < artList.length; i++) {
+            // itemClick(artList[i]);
+            artList[i].querySelector('summary').onclick = 
+                function(){itemClick(artList[i])};
+        };
+
+    </script>
+    <!-- **************************** -->
+    <!-- ***SCRIPT*** JS ***SCRIPT*** -->
+    <!-- **************************** -->
+</body>
+
+</html>
