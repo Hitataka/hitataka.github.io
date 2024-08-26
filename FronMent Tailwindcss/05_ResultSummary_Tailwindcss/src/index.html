@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <title>ResultSummary Tailwindcss</title>
+</head>
+
+<body class="min-h-[100vh] grid place-content-center font-HankenGrotesk">
+    <!-- ============================= -->
+    <!-- ===== ### CONTAINER ### ===== -->
+    <!-- ============================= -->
+    <div id="container" class="grid 
+         shadow-[0_0_8px_0_white] shadow-gray-300 md:rounded-[2rem] overflow-hidden
+         md:flex md:max-w-[800px] md:m-[2rem]
+         md:[&>section]:w-1/2">
+
+        <!-- ===== SECTION 1 CIRCLE start ===== -->
+        <section id="circle" class="bg-gradient-to-b from-cyan-300 from-[-20%] to-blue-600
+            py-[2.5rem] space-y-[.5rem]
+            grid justify-items-center text-center text-white
+            rounded-[0_0_2rem_2rem] px-[15%] md:rounded-none md:px-[10%]">
+
+            <!-- ***** TITLE ***** -->
+            <p class="text-[1.5rem] mb-[.5rem]">Your Result</p>
+
+            <!-- ***** @ CIR-ITEM @ start ***** -->
+            <div id="cir-item" class="h-[9rem] w-[9rem] rounded-full cursor-pointer
+                grid place-content-center 
+                bg-gradient-to-b from-blue-500 from-[-10%] to-cyan-400
+                transition-all
+                shadow-[0_8px_16px_0_white] shadow-cyan-100
+                hover:shadow-[0_-8px_16px_0_white] hover:shadow-blue-700
+                md:h-[12rem] md:w-[12rem]">
+
+                <b class="text-[4rem] leading-[4.5rem] md:text-[5rem] md:leading-[5.5rem]">74</b>
+                <p class="text-[1.25rem] leading-[1.5rem]">of 100</p>
+            </div>
+            <!-- ***** @ CIR-ITEM @ end ***** -->
+
+            <!-- ***** STATUS ***** -->
+            <b class="text-[2rem]">Great</b>
+
+            <!-- ***** TEXT-INFO ***** -->
+            <p class="text-[1.125rem] leading-[1.5rem]">You scored higher than 65% of 
+                the people who have taken these tests.</p>
+
+        </section>
+        <!-- ===== SECTION 1 CIRCLE end ===== -->
+
+
+        <!-- ===== SECTION 2 LIST start ===== -->
+        <section id="list" class="grid px-[2rem] py-[1.5rem] text-gray-900 ">
+            
+            <!-- ***** TITLE ***** -->
+            <b class="text-[1.5rem] mb-[1.5rem]">Summary</b>
+
+            <!-- ***** @ LIST-MAIN @ start ***** -->
+            <div id="list-item" class="grid space-y-[1rem] text-[1.125rem]
+                [&>.myItem]:flex [&>.myItem]:justify-between [&>.myItem]:items-center
+                [&>.myItem]:px-[1.5rem] [&>.myItem]:py-[1rem] [&>.myItem]:rounded-lg
+                [&_b]:ml-[1rem] [&_b]:mr-auto">
+                
+                <!-- item 1 -->
+                <div class="myItem bg-red-100">
+                    <img src="../assets/images/icon-reaction.svg" alt="Icon" />
+                    <b>Reaction</b>
+                    <P><b>80</b> / 100</P>
+                </div>
+                <!-- item 2 -->
+                <div class="myItem bg-yellow-100">
+                    <img src="../assets/images/icon-memory.svg" alt="Icon" />
+                    <b>Memory</b>
+                    <P><b>92</b> / 100</P>
+                </div>
+                <!-- item 3 -->
+                <div class="myItem bg-green-100">
+                    <img src="../assets/images/icon-verbal.svg" alt="Icon" />
+                    <b>Verbal</b>
+                    <P><b>64</b> / 100</P>
+                </div>
+                <!-- item 4 -->
+                <div class="myItem bg-blue-100">
+                    <img src="../assets/images/icon-visual.svg" alt="Icon" />
+                    <b>Visual</b>
+                    <P><b>72</b> / 100</P>
+                </div>
+
+            </div>
+            <!-- ***** @ LIST-MAIN @ end ***** -->
+
+            <!-- ***** BTN ***** -->
+            <button class="py-[1rem] mt-[2rem] mb-[1rem] text-white text-[1.25rem] 
+                font-bold bg-gray-700 rounded-full hover:bg-blue-600">
+                Continue
+            </button>
+
+        </section>
+        <!-- ===== SECTION 2 LIST end ===== -->
+
+    </div>
+    <!-- ============================= -->
+    <!-- ===== ### CONTAINER ### ===== -->
+    <!-- ============================= -->
+</body>
+
+</html>
