@@ -14,3 +14,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/04_Accordion_Tailwindcss/src/i
 <br/>
 05 ResultSummary FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/05_ResultSummary_Tailwindcss/src/index.html<br/>
+<br/>
+06 OrderSummary FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/06_OrderSummary_Tailwindcss/src/index.html<br/>
