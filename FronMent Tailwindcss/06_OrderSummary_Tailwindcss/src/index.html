@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <title>OrderSummary Tailwindcss</title>
+</head>
+
+<body class="min-h-[100vh] p-12 grid place-content-center 
+font-RedHat text-slate-700">
+    <!-- =================================== -->
+    <!-- ===== ### CONTAINER START ### ===== -->
+    <!-- =================================== -->
+    <div id="container" class="grid rounded-2xl overflow-hidden 
+    bg-white space-y-8 pb-8 max-w-[420px]
+    shadow-[0_6px_16px_0_white] shadow-slate-300">
+
+        <!-- ===== IMG HERO Start ===== -->
+        <figure class="imgHero w-full h-[200px]"></figure>
+        <!-- ===== IMG HERO End ===== -->
+
+
+        <!-- ===== TEXTS Start ===== -->
+        <div id="texts" class="grid text-center px-10">
+            <b class="text-[1.75rem] mb-3">Order Summary</b>
+            <p class="text-slate-500 leading-[1.5rem]">You can now listen to millions of songs, audiobooks,
+                and podcasts on any device anywhere you like!</p>
+        </div>
+        <!-- ===== TEXTS End ===== -->
+
+
+        <!-- ===== LIST-ITEMS Start ===== -->
+        <ul id="list-items" class="grid px-8 space-y-2
+            [&>li]:py-2 [&>li]:px-3 [&>li]:flex [&>li]:justify-between [&>li]:items-center 
+            [&>li]:rounded-md [&>li]:border [&>li]:bg-slate-50
+              [&_img]:h-[3rem] [&_img]:saturate-150
+              [&_span]:h-full [&_span]:ml-4 [&_span]:mr-auto [&_span]:grid [&_span]:content-around
+                [&_p]:text-slate-500
+              [&_a]:underline [&_a]:text-blue-700 [&_a]:font-bold [&_a:hover]:text-slate-500">
+
+            <!-- item 1 -->
+            <li><img src="../asset/images/icon-music.svg" alt="Icon" />
+                <span>
+                    <b>Annual Plan</b>
+                    <p>$59.99/year</p>
+                </span>
+                <a href="#list-items">Change</a>
+            </li>
+            <!-- item 2 -->
+            <li><img src="../asset/images/icon-music.svg" alt="Icon" />
+                <span>
+                    <b>Annual Plan2</b>
+                    <p>$39.99/year</p>
+                </span>
+                <a href="#list-items">Change</a>
+            </li>
+
+        </ul>
+        <!-- ===== LIST-ITEMS End ===== -->
+
+
+        <!-- ===== BTNS Start ===== -->
+        <div id="btns" class="grid px-8 space-y-3
+            [&>button]:font-bold [&>button]:py-3 [&>button]:rounded-md">
+            <!-- btn 1 -->
+            <button class="text-white bg-blue-700 shadow-[0_6px_8px_0_white] shadow-slate-400
+            hover:bg-slate-500">
+                Proceed to Payment</button>
+            <!-- btn 2 -->
+            <button class="text-slate-500 hover:text-slate-700">
+                Cencel Order</button>
+        </div>
+        <!-- ===== BTNS End ===== -->
+
+    </div>
+    <!-- =================================== -->
+    <!-- ===== ### CONTAINER START ### ===== -->
+    <!-- =================================== -->
+</body>
+
+</html>
