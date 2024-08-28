@@ -17,3 +17,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/05_ResultSummary_Tailwindcss/s
 <br/>
 06 OrderSummary FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/06_OrderSummary_Tailwindcss/src/index.html<br/>
+<br/>
+07 SocialProof FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/07_SocialProof_Tailwindcss/src/index.html<br/>
