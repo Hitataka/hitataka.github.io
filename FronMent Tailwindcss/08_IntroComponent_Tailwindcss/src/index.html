@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <title>IntroComponent Tailwindcss</title>
+</head>
+
+<body class="min-h-[100vh] max-w-[1600px] font-Poppins
+grid place-content-center px-8 py-16 md:px-[15%]
+lg:flex lg:items-center lg:px-[4%] xl:px-[8%] xl:mx-auto">
+    <!-- ================================= -->
+    <!-- ===== ### HEADING START ### ===== -->
+    <!-- ================================= -->
+    <section id="heading" class="text-white text-center grid place-content-center
+    lg:w-1/2 lg:px-[3%] xl:px-[5%] lg:text-left">
+        <b class="text-[2rem] mb-4 md:text-[3rem] lg:mb-8">Learn to code by watching others</b>
+        <p class="text-[1.125rem]">See how experienced developers solve problems 
+            in real-time. Watching scripted tutorials is 
+            great, but understanding how developers 
+            think is invaluable.</p>
+    </section>
+    <!-- =============================== -->
+    <!-- ===== ### HEADING END ### ===== -->
+    <!-- =============================== -->
+    
+
+
+    <!-- ================================= -->
+    <!-- ===== ### CONTENT START ### ===== -->
+    <!-- ================================= -->
+    <section id="content" class="mt-16 lg:w-1/2 lg:px-[3%] xl:px-[5%] lg:mt-0">
+        
+        <!-- ===== ADS Start ===== -->
+        <div id="ads" class="text-white mb-10 space-y-6 text-center
+            [&>p]:px-16 [&>p]:py-6 [&>p]:grayscale-[45%] [&>p]:cursor-pointer
+            [&>p:nth-child(1)]:bg-violet-600 [&>p:nth-child(1):hover]:bg-gray-600
+            [&>p:nth-child(2)]:bg-sky-400 [&>p:nth-child(2):hover]:bg-gray-500
+            [&>p]:rounded-md [&>p]:shadow-[0_8px_4px_0_rgba(31,41,55,0.2)]">
+
+            <!-- 1 -->
+            <p id="ad-obj">
+                <b>Try it free 7 days</b> 
+                then $20/mo. thereafter</p>
+            <!-- 2 -->
+            <p id="ad-obj">
+                <b>Try it free 7 days</b> 
+                then $20/mo. thereafter</p>
+
+        </div>
+        <!-- ===== ADS End ===== -->
+
+
+        <!-- ===== FORM Start ===== -->
+        <form id="form" class="p-8 bg-white text-gray-900 rounded-md grid
+        shadow-[0_10px_2px_0_rgba(31,41,55,0.2)]">
+
+            <!-- Inputs -->
+            <div id="inputs" class="grid space-y-10 mb-12
+                [&>input]:p-4 [&>input]:py-3 [&>input]:rounded [&>input]:text-[14px]
+                [&>input]:border-2 [&>input]:border-gray-800">
+
+                <input type="text" name="inp" id="fname" placeholder="First Name" />
+                <input type="text" name="inp" id="lname" placeholder="Last Name" />
+                <input type="email" name="inp" id="email" placeholder="email123@mail.com" />
+                <input type="password" name="inp" id="password" placeholder="password" />
+            </div>
+
+            <!-- Btns -->
+            <div id="btns" class="grid">
+                <button id="btn" type="submit" class="p-3 mb-4 rounded 
+                text-white font-bold bg-emerald-500 hover:bg-emerald-400
+                shadow-[0_6px_2px_0_rgba(31,41,55,0.2)]">
+                    CLAIM YOUR FREE TRIAL
+                </button>
+                <p class="text-[12px] px-6 text-center">By clicking the button you are agreeing to our 
+                    <a href="#btns" class="text-red-500">Terms and Services</a></p>
+            </div>
+            
+        </form>
+        <!-- ===== FORM End ===== -->
+
+    </section>
+    <!-- =============================== -->
+    <!-- ===== ### CONTENT END ### ===== -->
+    <!-- =============================== -->
+</body>
+
+</html>
