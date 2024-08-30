@@ -20,3 +20,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/06_OrderSummary_Tailwindcss/sr
 <br/>
 07 SocialProof FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/07_SocialProof_Tailwindcss/src/index.html<br/>
+<br/>
+08 IntroComponent FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/08_IntroComponent_Tailwindcss/src/index.html<br/>
