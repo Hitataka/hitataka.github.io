@@ -23,3 +23,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/07_SocialProof_Tailwindcss/src
 <br/>
 08 IntroComponent FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/08_IntroComponent_Tailwindcss/src/index.html<br/>
+<br/>
+09 SinglePrice FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/09_SInglePrice_Tailwindcss/src/index.html<br/>
