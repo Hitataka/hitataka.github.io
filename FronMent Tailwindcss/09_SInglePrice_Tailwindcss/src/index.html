@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <title>SinglePrice Tailwindcss</title>
+</head>
+
+<body class="min-h-[100vh] grid place-content-center font-Karla
+px-10 py-14 bg-slate-200 md:px-16">
+    <!-- =================================== -->
+    <!-- ===== ### CONTAINER START ### ===== -->
+    <!-- =================================== -->
+    <div id="container" class="max-w-[800px] grid bg-white shadow-lg
+    rounded-lg overflow-hidden">
+
+        <!-- ===== GRID-UP Start ===== -->
+        <section id="grid-up" class="p-8 grid space-y-4 lg:p-12
+            [&>b]:text-[1.75rem] [&>b]:text-teal-600
+            [&>#bold2]:text-[1.25rem] [&>#bold2]:text-lime-500
+            [&>p]:text-slate-400 [&>p]:leading-[1.75rem]
+            ">
+            <b id="bold1">Join Our Community</b>
+            <b id="bold2">30-day, hassle-free money back guarantee</b>
+            <p>Gain access to our full library of tutorials 
+                along with expert code riviews. Perfect for 
+                any developers who are serious about honing 
+                their skills.</p>
+        </section>
+        <!-- ===== GRID-UP End ===== -->
+        
+        
+        <!-- ===== GRID-DOWN Start ===== -->
+        <section id="grid-down" class="text-white grid md:flex
+            [&>#gd]:p-8 md:[&>#gd]:w-1/2 lg:[&>#gd]:p-12">
+
+            <!-- +++++ GD-One +++++ -->
+            <div id="gd" class="bg-teal-600 grid
+                [&>b]:text-[1.5rem]
+                [&>button]:  [&>button]:  [&>button]:  ">
+
+                <b>Monthly Subscription</b>
+                <span class="grid mt-4 mb-6
+                    [&>b]:text-[2.75rem] [&>b]:leading-[3rem] [&>b]:flex [&>b]:items-center
+                        [&>b>p]:opacity-70 [&>b>p]:font-normal
+                        [&>b>p]:ml-3 [&>b>p]:text-[1.25rem]
+                    [&>p]:text-[1.25rem]">
+                    <b>$29 <p>per month</p></b>
+                    <p>Full access for less than $1 a day</p>
+                </span>
+                <button class="text-[1.25rem] font-bold bg-lime-500
+                p-2 rounded-md overflow-hidden shadow-lg">Sign Up</button>
+            </div>
+
+            <!-- +++++ GD-Two +++++ -->
+            <div id="gd" class="bg-teal-500 grid
+                [&>b]:text-[1.5rem] [&>b]:mb-3">
+                <b>Why Us</b>
+                <ul class="">
+                    <li>Tutorials by industry experts</li>
+                    <li>Peer & expert code review</li>
+                    <li>Coding exercises</li>
+                    <li>Access to our GitHub repos</li>
+                    <li>Community forum</li>
+                    <li>Flashcard decks</li>
+                    <li>New videos every week</li>
+                </ul>
+            </div>
+
+        </section>
+        <!-- ===== GRID-DOWN End ===== -->
+
+    </div>
+    <!-- ================================= -->
+    <!-- ===== ### CONTAINER END ### ===== -->
+    <!-- ================================= -->
+</body>
+
+</html>
