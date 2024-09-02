@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../asset/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="output.css">
+    <title>HunddleLanding Tailwindcss</title>
+</head>
+
+<body class="min-h-[100vh] p-8
+grid place-content-center text-white font-OpenSans ">
+    <!-- =================================== -->
+    <!-- ===== ### CONTAINER START ### ===== -->
+    <!-- =================================== -->
+    <div id="container" class="grid space-y-[7rem]
+    max-w-[600px] lg:max-w-[1200px]">
+
+        <!-- ===== HEADER Start ===== -->
+        <header class="grid
+            [&>img]:h-[3rem]">
+            <img src="../asset/images/logo.svg" alt="Logo" class="" />
+        </header>
+        <!-- ===== HEADER End ===== -->
+        
+
+        <!-- ===== MAIN Start ===== -->
+        <main class="grid lg:flex lg:space-x-16">
+
+            <!-- ***** HERO-IMG start ***** -->
+            <div id="hero-img" class="grid lg:w-[60%] mb-[3rem] lg:m-0">
+                <img src="../asset/images/illustration-mockups.svg" alt="Illustration" />
+            </div>
+            <!-- ***** HERO-IMG end ***** -->
+            
+            <!-- ***** CONTENT start ***** -->
+            <div id="context" class="grid lg:w-[40%] lg:content-center 
+            text-center font-medium space-y-8
+            md:px-12 lg:px-0 lg:text-left
+                [&>b]:text-[2rem] [&>p]:leading-[1.75rem]">
+
+                <!-- Texts -->
+                <b>Build The Community Your Fans Will Love</b>
+                <p>Hunddle re-imagines the way we build communities. 
+                    You have a voice, but so does your audience. 
+                    Create connections with your users as you engage 
+                    in genuine discussion.</p>
+
+                <!-- Btns -->
+                <div id="btns" class="text-purple-700 font-medium tracking-[1px] 
+                space-x-6 flex justify-between
+                    [&>#btn]:py-3 [&>#btn]:w-full 
+                    [&>#btn]:bg-white [&>#btn]:rounded-full 
+                    [&>#btn]:shadow-[2px_6px_4px_0_rgba(0,0,0,0.25)]
+                    [&>#btn:hover]:bg-fuchsia-400 [&>#btn:hover]:text-white">
+                    <button id="btn" type="button">Register</button>
+                    <button id="btn" type="button">Login</button>
+                </div>
+
+            </div>
+            <!-- ***** CONTENT end ***** -->
+
+        </main>
+        <!-- ===== MAIN End ===== -->
+        
+
+        <!-- ===== FOOTER Start ===== -->
+        <footer class="flex justify-center lg:justify-end space-x-4
+            [&>span]:rounded-full [&>span]:grid [&>span]:place-content-center
+            [&>span]:w-11 [&>span]:h-11 [&>span]:border-2 
+            [&>span:hover]:bg-white [&>span:hover]:text-purple-700
+                [&_i]:text-[1.5rem]">
+            <span> <i class="fa fa-fw fa-brands fa-facebook-f"></i> </span>
+            <span> <i class="fa fa-fw fa-brands fa-twitter"></i> </span>
+            <span> <i class="fa fa-fw fa-brands fa-instagram"></i> </span>
+        </footer>
+        <!-- ===== FOOTER End ===== -->
+
+    </div>
+    <!-- =================================== -->
+    <!-- ===== ### CONTAINER START ### ===== -->
+    <!-- =================================== -->
+</body>
+
+</html>
