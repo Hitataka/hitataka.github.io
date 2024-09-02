@@ -26,3 +26,6 @@ https://hitataka.github.io/FronMent%20Tailwindcss/08_IntroComponent_Tailwindcss/
 <br/>
 09 SinglePrice FronMent Tailwindcss :<br/>
 https://hitataka.github.io/FronMent%20Tailwindcss/09_SInglePrice_Tailwindcss/src/index.html<br/>
+<br/>
+10 HunddleLanding FronMent Tailwindcss :<br/>
+https://hitataka.github.io/FronMent%20Tailwindcss/10_HunddleLanding_Tailwindcss/src/index.html<br/>
