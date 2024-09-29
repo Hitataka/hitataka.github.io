@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Age Calc - Frontend Mentor</title>
+</head>
+
+<body>
+    <!-- container ===== ##### ===== -->
+    <div id="container">
+        <!-- input ===== -->
+        <div id="inputs">
+        </div>
+        <!-- output ===== -->
+        <div id="outputs"></div>
+    </div>
+    <!-- container ===== ##### ===== -->
+
+
+
+    <!-- script ***** ##### ***** -->
+    <script>
+
+        // VAR *****
+        const err = {empty: 'This is empty', notNum: 'This is not number', outNum: ' Input out of the range', invalid: 'Invalid Date'};
+        const inpObj = [
+            {title: 'DAY', id: 'day', len: '2', val: '', errMsg: '', class: ''},
+            {title: 'MONTH', id: 'month', len: '2', val: '', errMsg: '', class: ''},
+            {title: 'YEAR', id: 'year', len: '4', val: '', errMsg: '', class: ''}
+        ];
+        const outObj = [
+            {val: '--', title: 'Days'},
+            {val: '--', title: 'Months'},
+            {val: '----', title: 'Years'}
+        ];
+        // VAR *****
+
+
+        // FUNCTION *****
+        function makeElemInputs(obj) {
+            return `
+                <span class="${obj.class}">
+                    <label for="${obj.id}" class="title">${obj.title}</label>
+                    <input type="text" id="${obj.id}" maxlength="${obj.len}" value="${obj.val}" />
+                    <p class="errMsg">${obj.errMsg}</p>
+                </span> 
+            `;
+        }
+        
+        function makeElemOutputs(obj) {
+            return `
+                <span>
+                    <b class="val">${obj.val}</b>
+                    <b class="title">${obj.title}</b>
+                </span> 
+            `;
+        }
+        
+        function btnClick() {
+            const age = []; 
+            let month = 0;
+            let year = 0;
+            const dateNow = new Date();
+            const userInp = [$('#day').val(), $('#month').val(), $('#year').val()];
+            const filter1 = [Number(userInp[0]) >= 0 && Number(userInp[0]) <= 31,
+                        Number(userInp[1]) >= 0 && Number(userInp[1]) <= 12,
+                        Number(userInp[2]) >= 0 && Number(userInp[2]) <= dateNow.getFullYear()];
+            const filter2 = (new Date(userInp[2] + '-' + userInp[1] + '-' + userInp[0]))
+                        .getDate() === Number(userInp[0]);
+
+            // Update Object
+            userInp.forEach( (v,i) => {
+                if (v === "") {
+                    inpObj[i]['errMsg'] = err.empty;
+                    inpObj[i]['class'] = 'err';
+                }else if (isNaN(Number(v))) {
+                    inpObj[i]['errMsg'] = err.notNum;
+                    inpObj[i]['class'] = 'err';
+                }else if (!filter1[i]) {
+                    inpObj[i]['errMsg'] = err.outNum;
+                    inpObj[i]['class'] = 'err';
+                }else if (!filter2) {
+                    inpObj[i]['errMsg'] = err.invalid;
+                    inpObj[i]['class'] = 'true';
+                }else {
+                    inpObj[i]['errMsg'] = "All True";
+                    inpObj[i]['class'] = "alltrue";
+                    $("#inputs span").addClass('true');
+
+                    switch (inpObj[i].title) {
+                        case 'DAY':
+                            if (Number(v) > Number(dateNow.getDate())) {
+                                month--;
+                                age.push(30 + Number(dateNow.getDate()) - Number(v));
+                            } else {age.push(Number(dateNow.getDate()) - Number(v))};
+                            break;
+                        case 'MONTH':
+                            if ((Number(v)-month) > Number(dateNow.getMonth()+1)) {
+                                year--;
+                                age.push(12 + Number(dateNow.getMonth()+1) - (Number(v) - month));
+                            } else {age.push(Number(dateNow.getMonth()+1) - (Number(v) - month))};
+                            break;
+                        default:
+                            age.push(Number(dateNow.getFullYear()) - (Number(v) - year));
+                            break;
+                    }
+
+                    outObj[i]['val'] = age[i];
+                }
+
+                inpObj[i]['val'] = v;
+            } );
+
+            // Update DOM (#outputs)
+            $("#inputs>*").remove();
+            $("#outputs>*:not('#btn')").remove();
+            inpObj.forEach(obj => { $("#inputs").append(makeElemInputs(obj)) });
+            outObj.forEach(obj => { $("#outputs").append(makeElemOutputs(obj)) });
+        }
+
+        // FUNCTION *****
+
+
+        // DOCUMENT LOADED *****
+        $(document).ready( () => {
+            $("#outputs").append(`
+                <button type='button' id='btn'>
+                    <span></span> <span></span> <span></span>
+                </button>`
+            );
+            inpObj.forEach(obj => { $("#inputs").append(makeElemInputs(obj)) });
+            outObj.forEach(obj => { $("#outputs").append(makeElemOutputs(obj)) });
+    
+            // EVENTS
+            $("#btn").click( () => {btnClick()} );
+            // EVENTS
+        } );
+        // DOCUMENT LOADED *****
+
+    </script>
+    <!-- script ***** ##### ***** -->
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+// VAR ===== ##### =====
+$Purple: hsl(259, 100%, 65%);
+$Lightred: hsl(0, 100%, 67%);
+
+$Offwhite: hsl(0, 0%, 94%);
+$Lightgrey: hsl(0, 0%, 86%);
+$Smokeygrey: hsl(0, 1%, 44%);
+$Offblack: hsl(0, 0%, 8%);
+
+@font-face {
+    font-family: Poppins;
+    src: url(./asset/fonts/Poppins-Bold.ttf);
+}
+// VAR ===== ##### =====
+
+
+// MIXIN ===== ##### =====
+@mixin shadow($size, $clr) {
+    box-shadow: 0 0 $size 0 $clr;
+}
+// MIXIN ===== ##### =====
+
+
+// STYLE ===== ##### =====
+* {margin: 0; padding: 0; 
+    box-sizing: border-box; font-family: sans-serif;
+}
+body {
+    min-height: 100vh;
+    padding: 2rem;
+    background: $Lightgrey;
+    display: grid;
+    place-content: center;
+}
+#container {
+    @include shadow(8px, $Smokeygrey);
+    background: $Offwhite;
+    border-radius: 1.5rem 1.5rem 5rem 1.5rem;
+    padding: 4rem 2rem;
+
+    // inputs =====
+    #inputs {
+        display: flex;
+        gap: 16px;
+        span {
+            &>* {font-family: monospace; color: $Smokeygrey;}
+            // width: 33%;
+            display: grid;
+            gap: 8px;
+            .title {font-size: 1rem; letter-spacing: 1px;}
+            .errMsg {font-size: 14px; line-height: 1rem; height: 2rem}
+            input {
+                @include shadow(4px, $Lightgrey);
+                color: black;
+                width: 100%;
+                padding: 0 12px; 
+                line-height: 3rem; 
+                font-size: 1.5rem;
+                border: none;
+                border-radius: 6px;
+                outline-color: $Smokeygrey;
+            }
+        }
+        span.err {
+            &>* {color: $Lightred;}
+            input {@include shadow(4px, $Lightred); outline-color: $Lightred;}
+        }
+        span.true {
+            &>* {color: #2d0;}
+            input {@include shadow(4px, #2d0); outline-color: #2d0;}
+        }
+        span.alltrue {
+            &>* {color: $Purple;}
+            input {@include shadow(4px, $Purple); outline-color: $Purple;}
+        }
+    }
+    // outputs =====
+    #outputs {
+        position: relative;
+        margin-top: 4rem;
+        padding-top: 4rem;
+        border-top: 2px solid $Lightgrey;
+        display: grid;
+
+        span{
+            &>* {font-family: Poppins, sans-serif;}
+            font-size: 3rem;
+            font-style: italic;
+            .val{color: $Purple; font-size: 4rem; line-height: 4.125rem}
+        }
+
+        #btn {
+            @include shadow(8px, $Purple);
+            cursor: pointer;
+            position: absolute;
+            justify-self: center;
+            translate: 0 -50%;
+            width: 60px; height: 60px;
+            padding: 12px;
+            background: $Purple;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            place-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+            span:not(:last-child) {
+                width: 18px; height: 18px;
+                border-radius: 100% 0 0 0;
+                border-width: 2px 0 0 2px;
+                border-style: solid;
+                border-color: white;
+                translate: -1px 0;
+            }
+            span:first-child {transform: scaleX(-1); translate: 1px 0;}
+            span:last-child {
+                position: absolute;
+                background: white; 
+                width: 2px; height: 32px;
+            }
+        }
+        #btn:hover {
+            background: $Smokeygrey;
+            @include shadow(8px, $Smokeygrey);
+        }
+        #btn:active {
+            background: black;
+            @include shadow(8px, black);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #container {
+        max-width: 650px;
+        border-radius: 2.5rem 2.5rem 10rem 2.5rem;
+        padding: 5rem 4rem;
+
+        #inputs {
+            padding-right: 20%;
+        }
+        #outputs {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            span {
+                font-size: 4rem;
+                .val{font-size: 5rem; line-height: 5.125rem}
+            }
+            #btn {justify-self: right; translate: 0 -50%; scale: 1.5;}
+        }
+    }
+    
+}
+// STYLE ===== ##### =====

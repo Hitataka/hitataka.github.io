@@ -1,0 +1,168 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./asset/fonts/Poppins-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem;
+  background: hsl(0, 0%, 86%);
+  display: grid;
+  place-content: center;
+}
+
+#container {
+  box-shadow: 0 0 8px 0 hsl(0, 1%, 44%);
+  background: hsl(0, 0%, 94%);
+  border-radius: 1.5rem 1.5rem 5rem 1.5rem;
+  padding: 4rem 2rem;
+}
+#container #inputs {
+  display: flex;
+  gap: 16px;
+}
+#container #inputs span {
+  display: grid;
+  gap: 8px;
+}
+#container #inputs span > * {
+  font-family: monospace;
+  color: hsl(0, 1%, 44%);
+}
+#container #inputs span .title {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+#container #inputs span .errMsg {
+  font-size: 14px;
+  line-height: 1rem;
+  height: 2rem;
+}
+#container #inputs span input {
+  box-shadow: 0 0 4px 0 hsl(0, 0%, 86%);
+  color: black;
+  width: 100%;
+  padding: 0 12px;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  outline-color: hsl(0, 1%, 44%);
+}
+#container #inputs span.err > * {
+  color: hsl(0, 100%, 67%);
+}
+#container #inputs span.err input {
+  box-shadow: 0 0 4px 0 hsl(0, 100%, 67%);
+  outline-color: hsl(0, 100%, 67%);
+}
+#container #inputs span.true > * {
+  color: #2d0;
+}
+#container #inputs span.true input {
+  box-shadow: 0 0 4px 0 #2d0;
+  outline-color: #2d0;
+}
+#container #inputs span.alltrue > * {
+  color: hsl(259, 100%, 65%);
+}
+#container #inputs span.alltrue input {
+  box-shadow: 0 0 4px 0 hsl(259, 100%, 65%);
+  outline-color: hsl(259, 100%, 65%);
+}
+#container #outputs {
+  position: relative;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 2px solid hsl(0, 0%, 86%);
+  display: grid;
+}
+#container #outputs span {
+  font-size: 3rem;
+  font-style: italic;
+}
+#container #outputs span > * {
+  font-family: Poppins, sans-serif;
+}
+#container #outputs span .val {
+  color: hsl(259, 100%, 65%);
+  font-size: 4rem;
+  line-height: 4.125rem;
+}
+#container #outputs #btn {
+  box-shadow: 0 0 8px 0 hsl(259, 100%, 65%);
+  cursor: pointer;
+  position: absolute;
+  justify-self: center;
+  translate: 0 -50%;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
+  background: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  place-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+#container #outputs #btn span:not(:last-child) {
+  width: 18px;
+  height: 18px;
+  border-radius: 100% 0 0 0;
+  border-width: 2px 0 0 2px;
+  border-style: solid;
+  border-color: white;
+  translate: -1px 0;
+}
+#container #outputs #btn span:first-child {
+  transform: scaleX(-1);
+  translate: 1px 0;
+}
+#container #outputs #btn span:last-child {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 32px;
+}
+#container #outputs #btn:hover {
+  background: hsl(0, 1%, 44%);
+  box-shadow: 0 0 8px 0 hsl(0, 1%, 44%);
+}
+#container #outputs #btn:active {
+  background: black;
+  box-shadow: 0 0 8px 0 black;
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    max-width: 650px;
+    border-radius: 2.5rem 2.5rem 10rem 2.5rem;
+    padding: 5rem 4rem;
+  }
+  #container #inputs {
+    padding-right: 20%;
+  }
+  #container #outputs {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  #container #outputs span {
+    font-size: 4rem;
+  }
+  #container #outputs span .val {
+    font-size: 5rem;
+    line-height: 5.125rem;
+  }
+  #container #outputs #btn {
+    justify-self: right;
+    translate: 0 -50%;
+    scale: 1.5;
+  }
+}
