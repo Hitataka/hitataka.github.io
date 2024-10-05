@@ -1,0 +1,327 @@
+// VAR ===== ===== =====
+$Red: hsl(14, 86%, 42%);
+$Green: hsl(159, 69%, 38%);
+$Rose50: hsl(20, 50%, 98%);
+$Rose100: hsl(13, 31%, 94%);
+$Rose300: hsl(14, 25%, 72%);
+$Rose400: hsl(7, 20%, 60%);
+$Rose500: hsl(12, 20%, 44%);
+$Rose900: hsl(14, 65%, 9%);
+
+@font-face {font-family: RedHat;
+    src: url(./asset/fonts/RedHatText-VariableFont_wght.ttf);
+}
+// VAR ===== ===== =====
+
+
+// MIXIN ===== ===== =====
+@mixin btnX() {
+    cursor: pointer;
+    position: absolute;
+    align-self: center;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid $Rose400;
+    color: $Rose400;
+    font-weight: bold;
+    &:hover {background: $Rose400; color: white;}
+}
+@mixin btnConfirm() {
+    cursor: pointer;
+    background: $Red;
+    height: 3.25rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    &:hover {filter: grayscale(30%);}
+}
+// MIXIN ===== ===== =====
+
+
+// STYLE ===== ===== =====
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: RedHat, sans-serif; color: $Rose900;
+}
+body.popup {overflow: hidden;}
+#CONTAINER{
+    width: 100%;
+    min-height: 100vh;
+    padding: 6%;
+    display: grid;
+    place-content: center;
+    
+    // ITEMS =====
+    #ITEMS {
+        display: grid;
+        row-gap: 1rem;
+
+        b.title {font-size: 3rem;}
+        ul.list {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+
+            // Object
+            li.obj {
+                position: relative;
+                width: 100%;
+                display: grid;
+                gap: 2.5rem;
+                // img
+                span.img {
+                    width: 100%; height: 60vw;
+                    background: gray;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    border: 2px solid white;
+                    &.active {border-color: $Red;}
+                }
+                // btnType1 & btnType2
+                .btnType1,.btnType2 {
+                    position: absolute;
+                    justify-self: center;
+                    top: 60vw;
+                    translate: 0 -50%;
+                    width: 160px;
+                    height: 3rem;
+                    background: white;
+                    border: 1px solid $Red;
+                    border-radius: 1.5rem;
+                    display: flex;
+                    gap: .5rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .btnType1 {
+                    cursor: pointer;
+                    img {height: 1.25rem;}
+                    p.text {font-weight: 500; color: $Red;}
+                }
+                .btnType2 {
+                    background: $Red;
+                    padding: 0 1rem;
+                    justify-content: space-between;
+                    .btnMin, .btnPlus {
+                        cursor: pointer;
+                        background: none;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        height: 1.25rem; width: 1.25rem;
+                        display: grid; place-content: center;
+                        img{height: 12px; width: 12px;}
+                        &:hover {background: rgba(white, 0.3);}
+                    }
+                    p.count {font-weight: 500; color: white; font-size: 1.125rem; width: 3rem; text-align: center;}
+                }
+                // texts
+                div.texts {
+                    display: grid;
+                    gap: .25rem;
+                    font-size: 1.25rem;
+                    .category { color: $Rose500;}
+                    .name {font-size: 1.5rem; font-weight: 500; color: $Rose900;}
+                    .price {font-weight: 500; color: $Red;}
+                }
+            }
+            // Object
+
+        }
+        
+    }
+    
+    // ASIDE =====
+    #ASIDE {
+        margin-top: 3rem;
+        padding: 2rem;
+        display: grid;
+        align-content: start;
+        gap: 2.5rem;
+
+        .title {font-size: 1.75rem; color: $Red;}
+        .list {
+            list-style: none;
+            display: grid;
+            gap: 1.5rem;
+            li.obj {
+                position: relative;
+                padding: .25rem 2rem .25rem .25rem;
+                border-bottom: 1px solid $Rose300;
+                display: grid;
+                gap: .5rem;
+                font-weight: 500;
+                .name {
+                    color: $Rose900; 
+                    font-size: 1.125rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                span {
+                    display: flex;
+                    gap: 1rem;
+                    .count {color: $Red;}
+                    .price {color: $Rose400;}
+                    .ttlPrice {color: $Rose500;}
+                }
+                .btnX {@include btnX;}
+            }
+        }
+        .section1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .text1{font-size: 1.25rem; color: $Red;}
+            .ttlPriceAll{font-size: 1.75rem;}
+        }
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {margin-right: .25rem; height: 2rem;}
+            .text2 span {font-weight: 500;}
+        }
+        .btnConfirm {@include btnConfirm();}
+    
+    }
+    #ASIDE.empty {
+        gap: 1.5rem;
+        img {margin: auto;}
+        p {text-align: center;}
+    }
+    
+    // POPUP =====
+    #POPUP {
+        margin: -6%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(black, 0.5);
+        display: none;
+        place-items: center;
+        &.active {position: fixed; display: grid;}
+
+        content {
+            align-self: flex-end;
+            background: white;
+            max-height: 95vh;
+            width: 100%;
+            padding: 2rem 1.5rem;
+            border-radius: 1rem 1rem 0 0;
+            display: grid;
+            gap: 2.5rem;
+
+            img {height: 3.5rem; margin-bottom: -1.5rem;}
+            .title {
+                display: grid;
+                color: $Rose900;
+                b {font-size: 2.5rem; margin-bottom: .25rem;}
+                p {font-size: 1rem;}
+            }
+            .list {
+                max-height: 32vh;
+                overflow-y: scroll;
+                list-style: none;
+                display: grid;
+                li.obj {
+                    position: relative;
+                    background: $Rose50;
+                    padding: .5rem 1rem;
+                    font-weight: 500;
+                    border-bottom: 1px solid $Rose100;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    img {height: 3.5rem; margin: 0;}
+                    .texts {
+                        margin-right: 1rem;
+                        display: grid;
+                        gap: .25rem;
+                        .name {
+                            width: 180px;
+                            color: $Rose900; 
+                            font-size: 1.125rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        span {
+                            display: flex;
+                            gap: 1rem;
+                            .count {color: $Red;}
+                            .price {color: $Rose400;}
+                        }
+                    }
+                    .ttlPrice {color: $Rose500; margin-left: auto;}
+                }
+            }
+            .total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{font-size: 1.25rem; color: $Red;}
+                b{font-size: 1.75rem;}
+            }
+            button {@include btnConfirm();}
+        }
+    }
+}
+
+// RESPONSIVE ===== =====
+@media screen and (min-width: 640px) {
+    #CONTAINER {
+        #ITEMS {
+            ul.list {
+                gap: 0;
+                li.obj {
+                    &:not(:last-child) {margin-bottom: 2rem;}
+                    padding: 0 1rem;
+                    width: calc(100% / 2);
+                    span.img {height: 240px;}
+                    .btnType1,.btnType2 {top: 240px;}
+                }
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    #CONTAINER {
+        padding: 6%;
+        display:  flex;
+
+        #ITEMS {
+            width: 70%;
+            ul.list {
+                gap: 0;
+                li.obj {
+                    padding: 0 .5rem;
+                    width: calc(100% / 3);
+                    span.img {height: 180px;}
+                    .btnType1,.btnType2 {top: 180px;}
+                }
+            }
+        }
+        #ASIDE {width: 30%;}
+        #POPUP {
+            margin: -6%;
+            height: 100vh;
+            place-content: center;
+            content {
+                border-radius: 1rem;
+                padding: 2rem;
+            }
+        }
+
+    }
+}
+// RESPONSIVE ===== =====
+
+// STYLE ===== ===== =====
+
+

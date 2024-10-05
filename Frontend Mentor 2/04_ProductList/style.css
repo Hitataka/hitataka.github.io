@@ -1,0 +1,394 @@
+@font-face {
+  font-family: RedHat;
+  src: url(./asset/fonts/RedHatText-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: RedHat, sans-serif;
+  color: hsl(14, 65%, 9%);
+}
+
+body.popup {
+  overflow: hidden;
+}
+
+#CONTAINER {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6%;
+  display: grid;
+  place-content: center;
+}
+#CONTAINER #ITEMS {
+  display: grid;
+  row-gap: 1rem;
+}
+#CONTAINER #ITEMS b.title {
+  font-size: 3rem;
+}
+#CONTAINER #ITEMS ul.list {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+#CONTAINER #ITEMS ul.list li.obj {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 2.5rem;
+}
+#CONTAINER #ITEMS ul.list li.obj span.img {
+  width: 100%;
+  height: 60vw;
+  background: gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid white;
+}
+#CONTAINER #ITEMS ul.list li.obj span.img.active {
+  border-color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType1, #CONTAINER #ITEMS ul.list li.obj .btnType2 {
+  position: absolute;
+  justify-self: center;
+  top: 60vw;
+  translate: 0 -50%;
+  width: 160px;
+  height: 3rem;
+  background: white;
+  border: 1px solid hsl(14, 86%, 42%);
+  border-radius: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType1 {
+  cursor: pointer;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType1 img {
+  height: 1.25rem;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType1 p.text {
+  font-weight: 500;
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType2 {
+  background: hsl(14, 86%, 42%);
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType2 .btnMin, #CONTAINER #ITEMS ul.list li.obj .btnType2 .btnPlus {
+  cursor: pointer;
+  background: none;
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: grid;
+  place-content: center;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType2 .btnMin img, #CONTAINER #ITEMS ul.list li.obj .btnType2 .btnPlus img {
+  height: 12px;
+  width: 12px;
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType2 .btnMin:hover, #CONTAINER #ITEMS ul.list li.obj .btnType2 .btnPlus:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+#CONTAINER #ITEMS ul.list li.obj .btnType2 p.count {
+  font-weight: 500;
+  color: white;
+  font-size: 1.125rem;
+  width: 3rem;
+  text-align: center;
+}
+#CONTAINER #ITEMS ul.list li.obj div.texts {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+}
+#CONTAINER #ITEMS ul.list li.obj div.texts .category {
+  color: hsl(12, 20%, 44%);
+}
+#CONTAINER #ITEMS ul.list li.obj div.texts .name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(14, 65%, 9%);
+}
+#CONTAINER #ITEMS ul.list li.obj div.texts .price {
+  font-weight: 500;
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ASIDE {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: grid;
+  align-content: start;
+  gap: 2.5rem;
+}
+#CONTAINER #ASIDE .title {
+  font-size: 1.75rem;
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ASIDE .list {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+}
+#CONTAINER #ASIDE .list li.obj {
+  position: relative;
+  padding: 0.25rem 2rem 0.25rem 0.25rem;
+  border-bottom: 1px solid hsl(14, 25%, 72%);
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+#CONTAINER #ASIDE .list li.obj .name {
+  color: hsl(14, 65%, 9%);
+  font-size: 1.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#CONTAINER #ASIDE .list li.obj span {
+  display: flex;
+  gap: 1rem;
+}
+#CONTAINER #ASIDE .list li.obj span .count {
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ASIDE .list li.obj span .price {
+  color: hsl(7, 20%, 60%);
+}
+#CONTAINER #ASIDE .list li.obj span .ttlPrice {
+  color: hsl(12, 20%, 44%);
+}
+#CONTAINER #ASIDE .list li.obj .btnX {
+  cursor: pointer;
+  position: absolute;
+  align-self: center;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid hsl(7, 20%, 60%);
+  color: hsl(7, 20%, 60%);
+  font-weight: bold;
+}
+#CONTAINER #ASIDE .list li.obj .btnX:hover {
+  background: hsl(7, 20%, 60%);
+  color: white;
+}
+#CONTAINER #ASIDE .section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#CONTAINER #ASIDE .section1 .text1 {
+  font-size: 1.25rem;
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #ASIDE .section1 .ttlPriceAll {
+  font-size: 1.75rem;
+}
+#CONTAINER #ASIDE .section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#CONTAINER #ASIDE .section2 img {
+  margin-right: 0.25rem;
+  height: 2rem;
+}
+#CONTAINER #ASIDE .section2 .text2 span {
+  font-weight: 500;
+}
+#CONTAINER #ASIDE .btnConfirm {
+  cursor: pointer;
+  background: hsl(14, 86%, 42%);
+  height: 3.25rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+#CONTAINER #ASIDE .btnConfirm:hover {
+  filter: grayscale(30%);
+}
+#CONTAINER #ASIDE.empty {
+  gap: 1.5rem;
+}
+#CONTAINER #ASIDE.empty img {
+  margin: auto;
+}
+#CONTAINER #ASIDE.empty p {
+  text-align: center;
+}
+#CONTAINER #POPUP {
+  margin: -6%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  place-items: center;
+}
+#CONTAINER #POPUP.active {
+  position: fixed;
+  display: grid;
+}
+#CONTAINER #POPUP content {
+  align-self: flex-end;
+  background: white;
+  max-height: 95vh;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+  display: grid;
+  gap: 2.5rem;
+}
+#CONTAINER #POPUP content img {
+  height: 3.5rem;
+  margin-bottom: -1.5rem;
+}
+#CONTAINER #POPUP content .title {
+  display: grid;
+  color: hsl(14, 65%, 9%);
+}
+#CONTAINER #POPUP content .title b {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+#CONTAINER #POPUP content .title p {
+  font-size: 1rem;
+}
+#CONTAINER #POPUP content .list {
+  max-height: 32vh;
+  overflow-y: scroll;
+  list-style: none;
+  display: grid;
+}
+#CONTAINER #POPUP content .list li.obj {
+  position: relative;
+  background: hsl(20, 50%, 98%);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#CONTAINER #POPUP content .list li.obj img {
+  height: 3.5rem;
+  margin: 0;
+}
+#CONTAINER #POPUP content .list li.obj .texts {
+  margin-right: 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+#CONTAINER #POPUP content .list li.obj .texts .name {
+  width: 180px;
+  color: hsl(14, 65%, 9%);
+  font-size: 1.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#CONTAINER #POPUP content .list li.obj .texts span {
+  display: flex;
+  gap: 1rem;
+}
+#CONTAINER #POPUP content .list li.obj .texts span .count {
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #POPUP content .list li.obj .texts span .price {
+  color: hsl(7, 20%, 60%);
+}
+#CONTAINER #POPUP content .list li.obj .ttlPrice {
+  color: hsl(12, 20%, 44%);
+  margin-left: auto;
+}
+#CONTAINER #POPUP content .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#CONTAINER #POPUP content .total p {
+  font-size: 1.25rem;
+  color: hsl(14, 86%, 42%);
+}
+#CONTAINER #POPUP content .total b {
+  font-size: 1.75rem;
+}
+#CONTAINER #POPUP content button {
+  cursor: pointer;
+  background: hsl(14, 86%, 42%);
+  height: 3.25rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+#CONTAINER #POPUP content button:hover {
+  filter: grayscale(30%);
+}
+
+@media screen and (min-width: 640px) {
+  #CONTAINER #ITEMS ul.list {
+    gap: 0;
+  }
+  #CONTAINER #ITEMS ul.list li.obj {
+    padding: 0 1rem;
+    width: 50%;
+  }
+  #CONTAINER #ITEMS ul.list li.obj:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  #CONTAINER #ITEMS ul.list li.obj span.img {
+    height: 240px;
+  }
+  #CONTAINER #ITEMS ul.list li.obj .btnType1, #CONTAINER #ITEMS ul.list li.obj .btnType2 {
+    top: 240px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #CONTAINER {
+    padding: 6%;
+    display: flex;
+  }
+  #CONTAINER #ITEMS {
+    width: 70%;
+  }
+  #CONTAINER #ITEMS ul.list {
+    gap: 0;
+  }
+  #CONTAINER #ITEMS ul.list li.obj {
+    padding: 0 0.5rem;
+    width: 33.3333333333%;
+  }
+  #CONTAINER #ITEMS ul.list li.obj span.img {
+    height: 180px;
+  }
+  #CONTAINER #ITEMS ul.list li.obj .btnType1, #CONTAINER #ITEMS ul.list li.obj .btnType2 {
+    top: 180px;
+  }
+  #CONTAINER #ASIDE {
+    width: 30%;
+  }
+  #CONTAINER #POPUP {
+    margin: -6%;
+    height: 100vh;
+    place-content: center;
+  }
+  #CONTAINER #POPUP content {
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+}
