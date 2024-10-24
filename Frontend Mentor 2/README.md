@@ -17,3 +17,6 @@ https://hitataka.github.io/Frontend%20Mentor%202/05_AgeCalc/index.html<br/>
 <br/>
 06 TIME TRACKING - Frontend Mentor :<br/>
 https://hitataka.github.io/Frontend%20Mentor%202/06_TimeTracking/src/index.html<br/>
+<br/>
+07 BENTO GRID - Frontend Mentor :<br/>
+https://hitataka.github.io/Frontend%20Mentor%202/07_BentoGrid/index.html<br/>
